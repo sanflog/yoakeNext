@@ -1,4 +1,9 @@
-import { useState } from "react"
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import Layout from '../components/layout';
+
+import { useState } from "react";
 
 export default function HomePage() {
   const names = ['Ada Lovelace', 'Grace Hopper', 'Margaret Hamilton'];
@@ -8,12 +13,16 @@ export default function HomePage() {
     setLikes(likes + 1);
   }
 
-  return(
-    <div>
+  return (
+		<Layout>
+			<Head>
+				<title>Yoake</title>
+			</Head>
 			<h1>Yoake</h1>
 			<h1>Sasaki Yudai</h1>
 			<p>I am web designer.</p>
-    </div>
+			This is <Link href="/tests/test_page">test page links!</Link>
+		</Layout>
   );
 }
 
