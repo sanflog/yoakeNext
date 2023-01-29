@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Layout, {siteTitle} from '../components/layout';
+import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '/styles/utils.module.css';
 import { getSortedPostsData } from '/lib/posts';
 
@@ -18,13 +18,12 @@ export default function HomePage({ allPostsData }) {
 			<Head>
 				<title>{siteTitle}</title>
 			</Head>
-			<section className={utilStyles.headingMd}>
-				<p>Hello, I'm Yudai. I'm learning web development these days. You can contact me on <a href="https://twitter.com/SasakiYudai0">Twitter</a></p>
+			<section className={utilStyles.textAlign}>
+				<p>Hello. I'm learning web development these days.<br />
+				You can contact me on <a href="https://twitter.com/SasakiYudai0">Twitter</a></p>
+			<p>Github: <a href="https://github.com/sanflog">sanflog</a></p>
 				<p>
-					This is a <a href="/tests/test_page">test</a> page!
-				</p>
-				<p>
-					My <a href="/blog/blog">Blog</a> is written about my activities.
+					This <a href="/blog/blog">Blog</a> is written about my activities.
 				</p>
 			</section>
 		</Layout>
