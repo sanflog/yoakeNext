@@ -1,6 +1,9 @@
-import Layout from '/components/layout';
 import Head from 'next/head';
+import Link from 'next/link';
+
+import Layout from '/components/layout';
 import utilStyles from '/styles/utils.module.css';
+import Date from '/components/date';
 import { getSortedPostsData } from '/lib/posts';
 
 export async function getStaticProps() {
@@ -13,7 +16,6 @@ export async function getStaticProps() {
 }
 
 export default function Blog({allPostsData}) {
-	console.log(allPostsData);
 	return (
 		<Layout>
 			<section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
@@ -22,14 +24,13 @@ export default function Blog({allPostsData}) {
 				</Head>
 				<h2 className={utilStyles.headingLg}>Blog</h2>
 				<ul className={utilStyles.list}>
-					{allPostsData.map(({ id, data, content }) => (
-						<li className={utilStyles.listItem} key="id">
-							<h2>{data.title}</h2>
+					{allPostsData.map(({ id, date, title }) => (
+						<li className={utilStyles.listItem} key={id}>
+							<Link href={`/blog/posts/${id}`}>{title}</Link>
 							<br />
-							{id}: 
-							{data.date}
-							<br />
-							<p>{content}</p>
+							<small>
+								<Date dateString={date} />
+							</small>
 							<br />
 						</li>
 					))}

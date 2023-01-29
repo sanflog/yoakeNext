@@ -24,7 +24,7 @@ export default function HomePage({ allPostsData }) {
 					This is a <a href="/tests/test_page">test</a> page!
 				</p>
 				<p>
-					My <a href="/blog">Blog</a> is written about my activities.
+					My <a href="/blog/blog">Blog</a> is written about my activities.
 				</p>
 			</section>
 		</Layout>
