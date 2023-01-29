@@ -37,11 +37,7 @@ export default function Post({ postData }) {
 				<br />
 				<div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
 			</article>
-<<<<<<< HEAD
 			<Link href="/blog/blog">back to Blog top</Link>
-=======
-			<Link href="/blog/blog">Back to the blog top</Link>	
->>>>>>> 4fcf852a51f37407266dfa4ffe6312829e99d5f8
 		</Layout>
 	);
 }
