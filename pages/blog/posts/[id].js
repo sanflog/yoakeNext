@@ -1,6 +1,7 @@
 import Head from 'next/head';
-import Layout from '/components/layout';
+import Link from 'next/link';
 
+import Layout from '/components/layout';
 import Date from '/components/date';
 import utilStyles from '/styles/utils.module.css';
 import { getAllPostIds, getPostData } from '/lib/posts';
@@ -36,6 +37,7 @@ export default function Post({ postData }) {
 				<br />
 				<div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
 			</article>
+			<Link href="/blog/blog">back to Blog top</Link>
 		</Layout>
 	);
 }
