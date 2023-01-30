@@ -25,10 +25,7 @@ export default function Layout({ children, home }) {
 
 			<main>{children}</main>
 
-			{home ? (
-				<>
-				</>
-			) : (
+			{!home && (
 				<div className="utileStyles.BackToHome">
 					<Link href="/">Back</Link>
 				</div>

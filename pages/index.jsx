@@ -24,7 +24,7 @@ export default function HomePage({ allPostsData }) {
 					You can contact me on 
 					<a href="https://twitter.com/SasakiYudai0">Twitter</a>!<br />
 					I have github account. If you are interested in, check 
-					<a href='https://github.com/sanflog/'> here</a>.
+					<a href="https://github.com/sanflog/"> here</a>.
 				</p>
 			<section className={utilStyles.textAlign}>
 				<p>Hello. I'm learning web development these days.<br />
@@ -35,6 +35,5 @@ export default function HomePage({ allPostsData }) {
 				</p>
 			</section>
 		</Layout>
-  );
+	);
 }
-
