@@ -18,11 +18,11 @@ export async function getStaticProps() {
 export default function Blog({allPostsData}) {
 	return (
 		<Layout>
-			<section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+			<section>
 				<Head>
 					<title>Blog</title>
 				</Head>
-				<h2 className={utilStyles.headingLg}>Blog</h2>
+				<h2>Blog</h2>
 				<ul className={utilStyles.list}>
 					{allPostsData.map(({ id, date, title }) => (
 						<li className={utilStyles.listItem} key={id}>

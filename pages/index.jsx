@@ -14,18 +14,22 @@ export async function getStaticProps() {
 
 export default function HomePage({ allPostsData }) {
   return (
-		<Layout home>
+		<>
 			<Head>
 				<title>{siteTitle}</title>
 			</Head>
-			<section className={utilStyles.textAlign}>
-				<p>Hello, I'm Yudai. I'm learning web development these days.<br />
-					 You can contact me on	<a href="https://twitter.com/SasakiYudai0">Twitter</a>!</p>
-				<p>Github: <a href="https://github.com/sanflog/">sanflog</a></p>
+			<section className={`
+				${utilStyles.width36emAndMarginAuto}
+				${utilStyles.textAlign}
+				${utilStyles.marginTop150px}`
+			}>
 				<p>
-					This <a href="/blog/blog">Blog</a> is written about my activities.
+					<strong>Hello, I'm Yudai. I'm learning web development these days.</strong>
+				</p>
+				<p>
+					<strong>I am writing <a href="/blog/blog">Blog.</a></strong>
 				</p>
 			</section>
-		</Layout>
+		</>
 	);
 }

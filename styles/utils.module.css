@@ -37,6 +37,18 @@
   padding-top: 1px;
 }
 
+.padding10px {
+  padding: 10px;
+}
+
+.padding20px {
+  padding: 20px;
+}
+
+.margin10px {
+	margin: 10px;
+}
+
 .list {
   list-style: none;
   padding: 0;
@@ -53,4 +65,14 @@
 
 .textAlign {
 	text-align: center;
+}
+
+.width36emAndMarginAuto {
+	max-width: 36em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.marginTop150px {
+	margin-top: 150px;
 }
