@@ -27,7 +27,7 @@ export default function HomePage({ allPostsData }) {
 					<strong>Hello, I'm Yudai. I'm learning web development these days.</strong>
 				</p>
 				<p>
-					<strong>I am writing <a href="/blog/blog">Blog.</a></strong>
+					<strong>Check my <a href="/blog/blog">Blog</a>.</strong>
 				</p>
 			</section>
 		</>
