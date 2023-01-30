@@ -18,18 +18,10 @@ export default function HomePage({ allPostsData }) {
 			<Head>
 				<title>{siteTitle}</title>
 			</Head>
-			<section className={utilStyles.headingMd}>
-				<p>
-					Hello, I'm Yudai. I'm learning web development these days. 
-					You can contact me on 
-					<a href="https://twitter.com/SasakiYudai0">Twitter</a>!<br />
-					I have github account. If you are interested in, check 
-					<a href="https://github.com/sanflog/"> here</a>.
-				</p>
 			<section className={utilStyles.textAlign}>
-				<p>Hello. I'm learning web development these days.<br />
-				You can contact me on <a href="https://twitter.com/SasakiYudai0">Twitter</a></p>
-			<p>Github: <a href="https://github.com/sanflog">sanflog</a></p>
+				<p>Hello, I'm Yudai. I'm learning web development these days.<br />
+					 You can contact me on	<a href="https://twitter.com/SasakiYudai0">Twitter</a>!</p>
+				<p>Github: <a href="https://github.com/sanflog/">sanflog</a></p>
 				<p>
 					This <a href="/blog/blog">Blog</a> is written about my activities.
 				</p>
