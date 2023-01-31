@@ -32,11 +32,11 @@
 }
 
 .headerIcon {
-	margin: 10px 15px 15px 15px;
+	margin: 0 15px 0 15px;
 	float: right;
 }
 
 .headerLink {
-	margin: 5px 15px 15px 15px;
+	margin: 0 15px 0 15px;
 	float: right;
 }

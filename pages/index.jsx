@@ -23,7 +23,10 @@ export default function HomePage({ allPostsData }) {
 				${styles.indexPage}
 				${utilStyles.width36emAndMarginAuto}
 			`}>
-				<div className={styles.verticalCenter}>
+				<div className={`
+					${styles.verticalCenter}
+					${utilStyles.padding20px}
+				`}>
 					<p>
 						<strong>Hello, I'm Yudai. I'm learning web development these days.</strong>
 					</p>
