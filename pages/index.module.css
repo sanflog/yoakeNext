@@ -1,0 +1,7 @@
+.indexPage a {
+	text-decoration: none;
+}
+
+.indexPage a:hover {
+	text-decoration: underline;
+}

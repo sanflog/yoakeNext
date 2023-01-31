@@ -41,12 +41,7 @@ export default function Layout({ children, home }) {
 					className={styles.siteLogo}
 					href="/"
 				>
-					<Image 
-						src="/images/yoake.jpg" 
-						width="75"
-						height="45"
-						alt="header image"
-					/>
+					<strong>YOAKE</strong>
 				</Link>
 				<Link 
 					className={styles.headerLink} 
@@ -55,26 +50,16 @@ export default function Layout({ children, home }) {
 					<strong>Blog</strong>
 				</Link>
 				<Link 
-					className={styles.headerIcon} 
+					className={styles.headerLink} 
 					href="https://twitter.com/SasakiYudai0"
 				>
-					<Image 
-						src="/images/Twitter-logo-black.png" 
-						width="25"
-						height="22"
-						alt="header image"
-					/>
+					<strong>Twitter</strong>
 				</Link>
 				<Link 
-					className={styles.headerIcon} 
+					className={styles.headerLink} 
 					href="https://github.com/sanflog/"
 				>
-					<Image 
-						src="/images/github-mark.svg" 
-						width="25"
-						height="22"
-						alt="header image"
-					/>
+					<strong>Github</strong>
 				</Link>
 			</div>
 

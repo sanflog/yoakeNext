@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '/styles/utils.module.css';
+import styles from './index.module.css';
 import { getSortedPostsData } from '/lib/posts';
 
 export async function getStaticProps() {
@@ -19,10 +20,10 @@ export default function HomePage({ allPostsData }) {
 				<title>{siteTitle}</title>
 			</Head>
 			<section className={`
+				${styles.indexPage}
 				${utilStyles.width36emAndMarginAuto}
-				${utilStyles.textAlign}
-				${utilStyles.marginTop150px}`
-			}>
+				${utilStyles.marginTop150px}
+			`}>
 				<p>
 					<strong>Hello, I'm Yudai. I'm learning web development these days.</strong>
 				</p>
