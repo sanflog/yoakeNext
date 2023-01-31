@@ -8,9 +8,9 @@ From today, I will write blog articles in **English** for increasing my own abil
 
 I would like to write about below things:
 
-> - Anything I thought of.
-> - Things happened when learning programing and English.
-> - Anything.
+- Anything I thought of.
+- Things happened when learning programing and English.
+- Anything.
 
 It is important for me to keep writing this blog.
 

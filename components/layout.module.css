@@ -15,7 +15,7 @@
 .header {
 	display: flex;
 	padding: 20px;
-	font-size: 0.8em;
+	font-size: 1em;
 }
 
 .header a{
