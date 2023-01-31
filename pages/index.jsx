@@ -22,14 +22,15 @@ export default function HomePage({ allPostsData }) {
 			<section className={`
 				${styles.indexPage}
 				${utilStyles.width36emAndMarginAuto}
-				${utilStyles.marginTop150px}
 			`}>
-				<p>
-					<strong>Hello, I'm Yudai. I'm learning web development these days.</strong>
-				</p>
-				<p>
-					<strong>Check my <a href="/blog/blog">Blog</a>.</strong>
-				</p>
+				<div className={styles.verticalCenter}>
+					<p>
+						<strong>Hello, I'm Yudai. I'm learning web development these days.</strong>
+					</p>
+					<p>
+						<strong>Check my <a href="/blog/blog">Blog</a>.</strong>
+					</p>
+				</div>
 			</section>
 		</>
 	);

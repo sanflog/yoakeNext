@@ -5,3 +5,9 @@
 .indexPage a:hover {
 	text-decoration: underline;
 }
+
+.verticalCenter {
+	margin: 0 auto;
+	position: absolute;
+	top: 40%;
+}
