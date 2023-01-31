@@ -41,25 +41,25 @@ export default function Layout({ children, home }) {
 					className={styles.siteLogo}
 					href="/"
 				>
-					<strong>YOAKE</strong>
+					YOAKE
 				</Link>
 				<Link 
 					className={styles.headerLink} 
 					href="/blog/blog"
 				>
-					<strong>Blog</strong>
+					Blog
 				</Link>
 				<Link 
 					className={styles.headerLink} 
 					href="https://twitter.com/SasakiYudai0"
 				>
-					<strong>Twitter</strong>
+					Twitter
 				</Link>
 				<Link 
 					className={styles.headerLink} 
 					href="https://github.com/sanflog/"
 				>
-					<strong>Github</strong>
+					Github
 				</Link>
 			</div>
 
