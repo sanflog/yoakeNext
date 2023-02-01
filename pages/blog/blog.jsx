@@ -22,7 +22,7 @@ export default function Blog({allPostsData}) {
 				<Head>
 					<title>Blog</title>
 				</Head>
-				<h3>Blog</h3>
+				<h1 className={utilStyles.headerFont}>Blog</h1>
 				<ul className={utilStyles.list}>
 					{allPostsData.map(({ id, date, title }) => (
 						<li className={utilStyles.listItem} key={id}>
