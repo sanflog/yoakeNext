@@ -1,0 +1,31 @@
+.header {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.header a{
+	text-decoration: none;
+}
+
+.headerItem {
+}
+
+.headerItem:hover {
+	background-color: #eaeaea;	
+	color: #fff;
+}
+
+.headerLeftItem {
+	list-style: none;
+	padding: 10px;
+	float: left;
+}
+
+.headerRightItem {
+	list-style: none;
+	padding: 10px;
+	float: right;
+}

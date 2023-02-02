@@ -4,6 +4,8 @@ import Link from 'next/link';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 
+import HeaderNavigationMenu from './header_navigation_menu';
+
 const name = 'Sasaki Yudai';
 export const siteTitle = "Yoake";
 
@@ -34,34 +36,10 @@ export default function Layout({ children, home }) {
 				<meta	property="og:image"	content="yoake"	/>
 				<meta name="og:title" content={siteTitle} />
 				<meta name="twitter:card" content="summary_large_image" />
+				<script src="https://ket.fontawesome.com/df1935126b.js" crossorigin="anonymous"></script>
 			</Head>
 
-			<div className={styles.header}>
-				<Link 
-					className={styles.siteLogo}
-					href="/"
-				>
-					YOAKE
-				</Link>
-				<Link 
-					className={styles.headerLink} 
-					href="/blog/blog"
-				>
-					Blog
-				</Link>
-				<Link 
-					className={styles.headerLink} 
-					href="https://twitter.com/SasakiYudai0"
-				>
-					Twitter
-				</Link>
-				<Link 
-					className={styles.headerLink} 
-					href="https://github.com/sanflog/"
-				>
-					Github
-				</Link>
-			</div>
+			<HeaderNavigationMenu />
 
 			<div className={styles.container}>
 				<main>{children}</main>
