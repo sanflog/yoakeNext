@@ -1,7 +1,11 @@
 import Head from 'next/head';
+
 import Layout, { siteTitle } from '../components/layout';
+import BottomFloatMenu from '../components/bottom_float_menu';
+
 import utilStyles from '/styles/utils.module.css';
 import styles from './index.module.css';
+
 import { getSortedPostsData } from '/lib/posts';
 
 export async function getStaticProps() {
@@ -19,6 +23,7 @@ export default function HomePage({ allPostsData }) {
 			<Head>
 				<title>{siteTitle}</title>
 			</Head>
+
 			<section className={`
 				${styles.indexPage}
 				${utilStyles.width36emAndMarginAuto}
@@ -34,6 +39,7 @@ export default function HomePage({ allPostsData }) {
 						<strong>Check my <a href="/blog/blog">Blog</a>.</strong>
 					</p>
 				</div>
+				<BottomFloatMenu />
 			</section>
 		</>
 	);

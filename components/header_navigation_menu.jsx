@@ -11,24 +11,7 @@ export default function headerNavigationMenu() {
 					</Link>
 				</li>
 				<li className={` ${style.headerRightItem} ${style.headerItem} `}>
-					<Link href="/blog/blog">
-						MENU
-					</Link>
-				</li>
-				<li className={` ${style.headerRightItem} ${style.headerItem} `}>
-					<Link href="https://twitter.com/SasakiYudai0"	>
-						Twitter
-					</Link>
-				</li>
-				<li className={` ${style.headerRightItem} ${style.headerItem} `}>
-					<Link href="https://github.com/sanflog/">
-						Github
-					</Link>
-				</li>
-				<li className={` ${style.headerRightItem} ${style.headerItem} `}>
-					<Link	href="/blog/blog">
-						Blog
-					</Link>
+					&lt;&gt;
 				</li>
 			</ul>
 		</>

@@ -1,0 +1,40 @@
+.bottomFloatMenu {
+	background-color: #222;
+	color: #bbb;
+	width: 100px;
+	position: fixed;
+	bottom: 0;
+	left: 40%;
+	margin: 20px auto;
+	padding: 10px;
+	font-size: 0.8em;
+	text-align: center;
+	box-shadow: 0 0 5px gray;
+	border-radius: 10px;
+}
+
+.bottomFloatMenuContent {
+	display: none;
+}
+
+.bottomFloatMenu:hover {
+	left: 25%;
+	width: 300px;
+}
+
+.bottomFloatMenu:hover .bottomFloatMenuContent {
+	display: block;
+}
+
+.bottomFloatMenuContent a {
+	color: white;
+	text-align: center;
+	padding-bottom: 10px;
+	display: block;
+	text-decoration: none;
+}
+
+.bottomFloatMenuContent a:hover {
+	background-color: black;
+	border-radius: 10px;
+}
