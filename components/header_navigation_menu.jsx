@@ -1,3 +1,5 @@
+import { AiOutlineBulb } from 'react-icons/ai';
+
 import Link from 'next/link'
 import style from './header_navigation_menu.module.css'
 
@@ -10,8 +12,8 @@ export default function headerNavigationMenu() {
 						YOAKE
 					</Link>
 				</li>
-				<li className={` ${style.headerRightItem} ${style.headerItem} `}>
-					&lt;&gt;
+				<li className={` ${style.headerRightItem} ${style.headerItem} `} >
+					<AiOutlineBulb />
 				</li>
 			</ul>
 		</>

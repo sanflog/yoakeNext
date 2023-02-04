@@ -2,15 +2,17 @@
 	background-color: #222;
 	color: #bbb;
 	width: 100px;
-	position: fixed;
-	bottom: 0;
-	left: 40%;
 	margin: 20px auto;
 	padding: 10px;
 	font-size: 0.8em;
 	text-align: center;
 	box-shadow: 0 0 5px gray;
 	border-radius: 10px;
+	position: fixed;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+	transition: 0.1s;
 }
 
 .bottomFloatMenuContent {
@@ -18,7 +20,6 @@
 }
 
 .bottomFloatMenu:hover {
-	left: 25%;
 	width: 300px;
 }
 
