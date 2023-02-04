@@ -1,3 +1,8 @@
+.indexPage {
+	margin: auto;
+	max-width: 40em;
+}
+
 .indexPage a {
 	text-decoration: none;
 }
@@ -6,8 +11,28 @@
 	text-decoration: underline;
 }
 
-.verticalCenter {
-	margin: 0 auto;
-	position: absolute;
-	top: 35%;
+.textCard {
+	box-sizing: border-box;
+	height: 100vh;
 }
+
+.centerText {
+	position: fixed;
+	top: 40%;
+	transition: translate(0, -50%);
+	opacity: 0;
+	animation-name: fadeIn;
+	animation-delay: 0.5s;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+	0% {
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+

@@ -7,6 +7,7 @@ import utilStyles from '/styles/utils.module.css';
 import styles from './index.module.css';
 
 import { getSortedPostsData } from '/lib/posts';
+import { dropText } from '/lib/dropText';
 
 export async function getStaticProps() {
 	const allPostsData = getSortedPostsData();
@@ -24,19 +25,11 @@ export default function HomePage({ allPostsData }) {
 				<title>{siteTitle}</title>
 			</Head>
 
-			<section className={`
-				${styles.indexPage}
-				${utilStyles.width36emAndMarginAuto}
-			`}>
-				<div className={`
-					${styles.verticalCenter}
-					${utilStyles.padding20px}
-				`}>
-					<p>
-						<strong>Hello, I'm Yudai. I'm learning web development these days.</strong>
-					</p>
-					<p>
-						<strong>Check my <a href="/blog/blog">Blog</a>.</strong>
+			<section className={` ${styles.indexPage}	`}>
+				<div className={`	${styles.textCard} `}>
+					<p className={styles.centerText}>
+						<strong>Hello, I'm Yudai. <br />
+							This site is showing what my thought.</strong>
 					</p>
 				</div>
 				<BottomFloatMenu />
