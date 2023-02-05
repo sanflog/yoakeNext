@@ -11,6 +11,7 @@
 }
 
 .headerItem {
+	text-align: center;
 }
 
 .headerItem:hover {
@@ -19,12 +20,14 @@
 }
 
 .headerLeftItem {
+	width: 10%;
 	list-style: none;
 	padding: 10px;
 	float: left;
 }
 
 .headerRightItem {
+	width: 10%;
 	list-style: none;
 	padding: 10px;
 	float: right;
