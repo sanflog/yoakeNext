@@ -124,7 +124,6 @@
 	text-decoration: none;
 }
 
-
 /*
  * others
  */
@@ -133,5 +132,14 @@
 	max-width: 40em;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.card {
+	margin: 20px auto;
+	padding: 15px;
+	max-width: 500px;
+	height: 120px;
+	border: 1px solid gray;
+	border-radius: 10px;
 }
 

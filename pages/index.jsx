@@ -20,7 +20,7 @@ export async function getStaticProps() {
 
 export default function HomePage({ allPostsData }) {
   return (
-		<>
+		<Layout>
 			<Head>
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				<title>{siteTitle}</title>
@@ -35,6 +35,6 @@ export default function HomePage({ allPostsData }) {
 				</div>
 				<BottomFloatMenu />
 			</section>
-		</>
+		</Layout>
 	);
 }

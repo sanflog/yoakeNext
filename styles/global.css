@@ -27,3 +27,13 @@ img {
 	max-width: 100%;
 	display: block;
 }
+
+/*
+ * media query
+ */
+
+@media only screen and (max-width: 600px) {
+	.card {
+		width: 100%;
+	}
+}
