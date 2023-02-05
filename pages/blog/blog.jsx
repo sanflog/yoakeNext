@@ -22,18 +22,18 @@ export default function Blog({allPostsData}) {
 				<Head>
 					<title>Blog</title>
 				</Head>
-				<h1 className={` ${utilStyles.headerFont} ${utilStyles.textAlign} `}>Blog</h1>
+				<h1 className={` ${utilStyles.headerFont} `}>Blog</h1>
 				<div>
 					{allPostsData.map(({ id, date, title }) => (
-						<div className={utilStyles.card} key={id}>
-							<Link href={`/blog/posts/${id}`}>	
-								<h3 className={utilStyles.headerFont}>{title}</h3>
+						<Link href={`/blog/posts/${id}`}>	
+							<div className={utilStyles.card} key={id}>
+								<h1 className={utilStyles.headerFont}>{title}</h1>
 								<small>
 									<Date dateString={date} />
 								</small>
 								<br />
-							</Link>
-						</div>
+							</div>
+						</Link>
 					))}
 				</div>
 			</section>
