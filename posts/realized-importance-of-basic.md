@@ -3,22 +3,15 @@ title: Realized the importance of basic.
 date: '2023-02-04'
 ---
 
+I realized the inportance of **basic**.
 
-Hi, I'm **Yudai Sasaki**. This is first post.  
-From today, I will write blog articles in **English** for increasing my own ability. I'm **studying English** these days. 
+It happend when learning how to write css **basic**.  
+I recommend the following site.  
 
-I would like to write about below things:
+- w3schools : <https://www.w3schools.com/>
 
-- Anything I thought of.
-- Things happened when learning programing and English.
-- Anything.
+The tutorials of this site are greate!!  
 
-It is important for me to keep writing this blog.
+I read only the css tutorial. I will read the HTML and Javascript tutorials.
 
-### MarkDown practice!
-
-Twitter: [@SasakiYudai0](https://twitter.com/SasakiYudai0)  
-Github: [sanflog][1]  
-Gmail: <documents.ys72@gmial.com>  
-
-[1]: <https://github.com/sanflog/>
+I think it will definitly be a good experience.
