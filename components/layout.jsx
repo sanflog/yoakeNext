@@ -15,11 +15,8 @@ export default function Layout({ children, home }) {
 	return (
 		<>
 			<Head>
-				<link rel='icon' href="/favicon.ico" />
-				<meta name='dicsription'content='This is yoake website.' />
-				<meta	property="og:image"	content="yoake"	/>
 				<meta name="og:title" content={siteTitle} />
-				<meta name="twitter:card" content="summary_large_image" />
+				<meta	property="og:image"	content="yoake"	/>
 			</Head>
 
 			<HeaderNavigationMenu />

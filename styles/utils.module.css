@@ -125,6 +125,14 @@
 }
 
 /*
+ * flex box
+ */
+
+.flexContainer {
+	width: 100%;
+}
+
+/*
  * others
  */
 
@@ -137,6 +145,13 @@
 .card {
 	margin: 20px auto;
 	padding: 15px;
+	width: 50%;
 	height: 120px;
+	float: left;
 }
 
+@media only screen and (max-width: 1000px) {
+	.card {
+		width: 100%
+	}
+}
