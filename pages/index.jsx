@@ -27,7 +27,7 @@ export default function HomePage({ allPostsData }) {
 			</Head>
 
 			<section className={` ${styles.indexPage}	`}>
-				<div className={`	${styles.textCard} `}>
+				<div id="indexAnimationCard1" className={styles.textCard}>
 					<p className={styles.centerText}>
 						<strong>Hello, I'm Yudai. <br />
 							This site is showing what my thought.</strong>

@@ -22,7 +22,7 @@ export default function Blog({allPostsData}) {
 				<Head>
 					<title>Blog</title>
 				</Head>
-				<h1 className={` ${utilStyles.headerFont} `}>Blog</h1>
+				<h1 className={` ${utilStyles.headerFont} ${utilStyles.bigHeader} ${utilStyles.gradientColorText} `}>BLOG</h1>
 				<div className={utilStyles.flexContainer}>
 					{allPostsData.map(({ id, date, title }) => (
 						<Link href={`/blog/posts/${id}`}>	

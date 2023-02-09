@@ -12,29 +12,25 @@
 }
 
 .textCard {
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+	position: fixed;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .centerText {
-	position: fixed;
-	top: 40%;
-	transition: translate(0, -50%);
 	opacity: 0;
 	animation-name: fadeIn;
-	animation-delay: 0.5s;
 	animation-duration: 2s;
 	animation-fill-mode: forwards;
 }
 
+
 @keyframes fadeIn {
 	0% {
+		opacity: 0;
 	}
 	100% {
 		opacity: 1;
 	}
 }
-
-

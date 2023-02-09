@@ -33,6 +33,10 @@
   line-height: 1.5;
 }
 
+.bigHeader {
+	font-size: 10em;
+}
+
 /*
  * border
  */
@@ -122,6 +126,14 @@
 
 .noneDecoration {
 	text-decoration: none;
+}
+
+.gradientColorText {
+	background: linear-gradient(90deg, #0026ff, #ff0d45, #ff1c24);
+		-webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
 }
 
 /*
