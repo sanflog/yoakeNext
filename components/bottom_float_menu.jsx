@@ -7,6 +7,8 @@ export default function bottom_float_menu() {
 			<div className={styles.bottomFloatMenuContent}>
 				<Link href="/">Top</Link>
 				<Link href="/blog/blog">Blog</Link>
+				<Link href="/thinkingAnalyzer/thinkingAnalyzer">Thinking Analyzer</Link>
+				<Link href="/about/aboutMe">About Me</Link>
 				<Link href="https://twitter.com/SasakiYudai0">Twitter</Link>
 				<Link href="https://github.com/sanflog/">Github</Link>
 			</div>

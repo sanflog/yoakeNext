@@ -1,0 +1,14 @@
+.thinkingAnalyzerCard {
+	padding: 10px;
+	border-bottom: solid 1px gray;
+}
+
+.thinkingAnalyzerList {
+	padding-left: 20px;
+	display: none;
+}
+
+.thinkingAnalyzerCard:hover .thinkingAnalyzerList {
+	display: block;
+}
+
