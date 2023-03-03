@@ -4,11 +4,25 @@
 
 .thinkingAnalyzerList {
 	padding-left: 20px;
-	border-top: solid 1px gray;
-	display: none;
 }
 
-.thinkingAnalyzerCard:hover .thinkingAnalyzerList {
-	display: block;
+.detailTarget {
+}
+
+.detailTable {
+	border-collapse: collapse;
+}
+
+.detailTable th{
+	background-color: whiteSmoke;
+	width: 100px;
+	padding: 5px;
+	border: solid 1px black;
+}
+
+.detailTable td{
+	width: 100px;
+	padding: 5px;
+	border: solid 1px black;
 }
 
