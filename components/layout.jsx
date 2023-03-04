@@ -21,7 +21,7 @@ export default function Layout({ children, home }) {
 
 			<HeaderNavigationMenu />
 
-			<div className={styles.container}>
+			<div className={` ${styles.container} ${utilStyles.fadeIn} `}>
 				<main>{children}</main>
 			</div>
 

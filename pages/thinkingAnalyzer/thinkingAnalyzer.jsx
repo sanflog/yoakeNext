@@ -46,6 +46,10 @@ function cardTitleHandler( showCard, setShowCard ) {
 	setShowCard(!showCard);
 }
 
+function AddCardButton() {
+	return <button>+add</button>
+}
+
 function FunctionCard({item}) {
 	const [showCard, setShowCard] = useState(false);
 	const details = item.detail.map((i, n) => {
@@ -85,12 +89,34 @@ function FunctionCard({item}) {
 					<div>{item.title}</div>
 				</a>
 
-				<div className={ styles.thinkingAnalyzerList }>
+				<div className={` ${styles.thinkingAnalyzerList} ${utilStyles.fadeIn} `}>
 					{details}
 				</div>
 			</div>
 		); 
 	}
+}
+
+function AddCardForm() {
+	return (
+		<form>
+
+			<label>Title: </label><br />
+			<input type="text" />
+			<br />
+
+			<label>Target: </label><br />
+			<input type="text" />
+			<br />
+
+			<label>Function: </label><br />
+			<input type="radio" id="judgment" name="cFunction" value="JUDGMENT" />
+			<label>Judgment </label>
+			<input type="radio" id="preceive" name="cFunction" value="PERCEIVE" />
+			<label>Perveive </label>
+
+		</form>
+	);
 }
 
 export default function ThinkingAnalyzer({allPostsData}) {
@@ -107,6 +133,9 @@ export default function ThinkingAnalyzer({allPostsData}) {
 				</Head>
 
 				<h1>Thinking Analyzer</h1>
+
+				<AddCardButton />
+				<AddCardForm />
 				{cards}
 
 			</section>

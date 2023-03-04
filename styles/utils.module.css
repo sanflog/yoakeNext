@@ -162,6 +162,26 @@
 	float: left;
 }
 
+/*
+ * Animation
+ */
+
+.fadeIn {
+	opacity: 0;
+	animation-name: fadeIn;
+	animation-duration: 0.7s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 @media only screen and (max-width: 1000px) {
 	.card {
 		width: 100%
