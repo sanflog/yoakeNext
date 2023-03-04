@@ -1,5 +1,11 @@
-.addCardBotton {
-	margin: 20px;
+.addCardButton {
+	height: 10%;
+	font-size: 1.5em;
+	color: black;
+	font-weight: bold;
+	cursor: pointer;
+	text-align: center;
+	padding: 20px;
 }
 
 .addCardForm {

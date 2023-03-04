@@ -35,6 +35,39 @@
 
 .bigHeader {
 	font-size: 4em;
+	padding: 30px 20px 10px 20px;
+	text-align: center;
+}
+
+/*
+ * title
+ */
+
+.title {
+	margin: 5px;
+	height: 50vh;
+	width: 100%;
+	border-radius: 30px;
+}
+
+.describeToTitle {
+	text-align: center;
+	font-size: 1.5em;
+}
+
+/*
+ * main contents
+ */
+
+.mainArticle {
+	margin: 5px;
+	width: 100%;
+	background-color: #e3ffe9;
+	border-radius: 30px;
+}
+
+.subContent {
+	border-radius: 30px;
 }
 
 /*
@@ -90,6 +123,14 @@
 	color: black;
 }
 
+.bgBlue {
+	background-color: #e0fdff;
+}
+
+.bgRed {
+	background-color: #ffe6e9;
+}
+
 
 /*
  * padding
@@ -120,6 +161,10 @@
 
 .marginBottom20px {
 	margin-bottom: 20px;
+}
+
+.marginTop20px {
+	margin-top: 20px;
 }
 
 
@@ -188,8 +233,8 @@
 	padding: 15px;
 	width: 50%;
 	height: 120px;
-	float: left;
 }
+
 
 /*
  * Animation

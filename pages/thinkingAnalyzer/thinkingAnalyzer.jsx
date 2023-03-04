@@ -98,12 +98,11 @@ function FunctionCard({item}) {
 
 function AddCardButton({ addCardButtonHandler }) {
 	return (
-		<button 
-			className={` ${utilStyles.radiusButton} ${utilStyles.marginBottom20px} `} 
-			onClick={() => addCardButtonHandler()}
-		>
-			+add
-		</button>
+		<div className={styles.addCardButton}>
+			<a onClick={() => addCardButtonHandler()}>
+				Click here to add card!
+			</a>
+		</div>
 	);
 }
 
@@ -206,9 +205,36 @@ export default function ThinkingAnalyzer({allPostsData}) {
 					<title>Thinking Analyzer</title>
 				</Head>
 
-				<h2 className={ utilStyles.bigHeader }>Thinking Analyzer</h2>
+				<div className={` 
+					${utilStyles.title} 
+					${utilStyles.bgBlue} 
+				`}>
+					<h2 className={`
+						${utilStyles.bigHeader} 
+						${utilStyles.headerFont} 
+					`}>
+					Thinking Analyzer
+				</h2>
+					<p className={ utilStyles.describeToTitle}>
+						Thinking Analizer is a tool that allow you to structure what you think.<br />
+						Structuring thought is very important to all of your life.
+					</p>
+				</div>
 
-				<AddCardButton addCardButtonHandler={addCardButtonHandler} />
+				<div className={utilStyles.mainArticle}>
+					<h3 className={`
+						${utilStyles.bigHeader}
+						${utilStyles.headerFont} 
+					`}>
+						Let's Add Your Thinking Patern.
+					</h3>
+					<p className={ utilStyles.describeToTitle}>
+						You can add card that is your thinking patern.<br />
+						The add button below will be pushed when you want to add my thinking card. 
+					</p>
+					<AddCardButton addCardButtonHandler={addCardButtonHandler} />
+				</div>
+
 				<AddCardForm showForm={showForm} />
 
 				<h3>Thinking Patern List</h3>

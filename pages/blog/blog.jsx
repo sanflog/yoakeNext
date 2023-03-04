@@ -22,11 +22,30 @@ export default function Blog({allPostsData}) {
 				<Head>
 					<title>Blog</title>
 				</Head>
-				<h1 className={` ${utilStyles.headerFont} ${utilStyles.bigHeader} ${utilStyles.gradientColorText} `}>BLOG</h1>
+
+				<div className={`
+					${utilStyles.title}
+				`}>
+					<h1 className={`
+						${utilStyles.headerFont} 
+						${utilStyles.bigHeader} 
+						${utilStyles.gradientColorText} 
+					`}>
+						BLOG
+					</h1>
+					<p className={utilStyles.describeToTitle}>
+						Hello, here is my blog.
+					</p>
+				</div>
 				<div className={utilStyles.flexContainer}>
 					{allPostsData.map(({ id, date, title }) => (
 						<Link href={`/blog/posts/${id}`}>	
-							<div className={utilStyles.card} key={id}>
+							<div className={`
+								${utilStyles.card}
+								${utilStyles.subContent}
+							`} 
+								key={id}
+							>
 								<h1 className={utilStyles.headerFont}>{title}</h1>
 								<small>
 									<Date dateString={date} />
