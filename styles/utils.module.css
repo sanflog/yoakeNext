@@ -34,7 +34,7 @@
 }
 
 .bigHeader {
-	font-size: 10em;
+	font-size: 4em;
 }
 
 /*
@@ -56,6 +56,27 @@
   border-radius: 9999px;
 }
 
+/*
+ * button
+ */
+
+.radiusButton {
+	padding: 10px 20px 10px 20px;
+	border-radius: 10px;
+	background-color: white;
+	box-shadow: none;
+	border: 1px solid gray;
+	cursor: pointer;
+}
+
+.radiusButton:hover {
+	padding: 10px 20px 10px 20px;
+	border-radius: 10px;
+	background-color: #d1f4ff;
+	box-shadow: none;
+	border: 1px solid #5eacff;
+	cursor: pointer;
+}
 
 /*
  * color
@@ -97,6 +118,10 @@
 	margin-top: 150px;
 }
 
+.marginBottom20px {
+	margin-bottom: 20px;
+}
+
 
 /*
  * list
@@ -122,6 +147,10 @@
 
 .textAlign {
 	text-align: center;
+}
+
+.fontBold {
+	font-weight: bold;
 }
 
 .noneDecoration {
@@ -181,6 +210,27 @@
 		opacity: 1;
 	}
 }
+
+.fadeOut {
+	opacity: 1;
+	animation-name: fadeOut;
+	animation-duration: 0.7s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 2;
+	}
+}
+
+
+/*
+ * media query
+ */
 
 @media only screen and (max-width: 1000px) {
 	.card {
