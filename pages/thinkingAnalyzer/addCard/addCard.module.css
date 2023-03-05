@@ -1,75 +1,52 @@
-.addCardButton {
-	height: 10%;
-	width: 400px;
-	margin: auto;
-	padding: 20px;
-	text-align: center;
-	font-size: 1.5em;
-	font-weight: bold;
-	color: black;
-	background-color: #a8ffdb;
-	border-radius: 30px;
-	cursor: pointer;
-}
-
 .addCardForm {
-	padding: 10px;
-	margin: 10px;
-	box-shadow: 0 0 1px gray;
+	max-width: 700px;
+	margin: auto;
 }
 
 .addCardTitle {
-	padding-bottom: 10px;
+	padding: 20px;
+	margin: 20px 0 20px 0;
+	border-radius: 20px;
+	background-color: #ffe3c2;
+}
+
+.addCardTitle textarea{
+	width: 100%;
+	height: 100px;
+	padding: 10px;
+	border: none;
+	border-radius: 10px;
+	background-color: #f9f9f9;
 }
 
 .addCardInput {
+	width: 100%;
+	padding: 10px;
+	margin-top: 10px;
+	background-color: #f9f9f9;
 	border: none;
-	border-bottom: 1px solid gray;
+	border-radius: 20px;
+}
+
+.addCardInput:focus {
+	background-color: #f9f9f9;
 }
 
 .addCardDetail {
 	padding: 20px;
+	border-radius: 30px;
+	background-color: #ffe3c2;
 }
 
 .addCardDetailItem {
+	margin-Top: 20px;
 	padding-bottom: 10px;
 }
 
-.thinkingAnalyzerCard {
-	padding: 10px;
-}
-
-.thinkingAnalyzerCard a {
-	font-weight: bold;
+.addButton {
+	padding: 20px;
+	background-color: #ffe8de;
+	border: none;
+	border-radius: 20px;
 	cursor: pointer;
-}
-
-.thinkingAnalyzerCard a:hover {
-	text-decoration: none;
-	font-weight: bold;
-	cursor: pointer;
-}
-
-.thinkingAnalyzerList {
-	padding-left: 20px;
-}
-
-.detailTarget {
-}
-
-.detailTable {
-	border-collapse: collapse;
-}
-
-.detailTable th{
-	background-color: whiteSmoke;
-	width: 100px;
-	padding: 5px;
-	border: solid 1px black;
-}
-
-.detailTable td{
-	width: 100px;
-	padding: 5px;
-	border: solid 1px black;
 }

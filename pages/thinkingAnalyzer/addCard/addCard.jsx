@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Head from 'next/head';
 
 import Layout from '../../../components/layout.jsx';
 
@@ -11,14 +12,20 @@ function AddCardForm() {
 			<form>
 
 				<div className={ styles.addCardTitle }>
-					<label className={ utilStyles.fontBold }>Title: </label>
-					<input className={ styles.addCardInput }type="text" />
+					<label className={ utilStyles.fontBold }>Title: </label><br />
+					<input className={ styles.addCardInput }type="text" placeholder="Title..." />
+				</div>
+
+				<div className={ styles.addCardTitle }>
+					<label className={ utilStyles.fontBold }>Detail: </label><br />
+					<textarea name="detail" placeholder="explain this card..." />
 				</div>
 
 				<div className={ styles.addCardDetail }>
+
 					<div className={ styles.addCardDetailItem }>
 						<label className={ utilStyles.fontBold }>Target: </label><br />
-						<input className={ styles.addCardInput } type="text" />
+						<input className={ styles.addCardInput } type="text" placeholder="Target..." />
 					</div>
 
 					<div className={ styles.addCardDetailItem }>
@@ -65,12 +72,25 @@ function AddCardForm() {
 
 					<div className={ styles.addCardDetailItem }>
 						<label className={ utilStyles.fontBold }>What decide: </label><br />
-						<input className={ styles.addCardInput } type="text" />
+						<input className={ styles.addCardInput } type="text" placeholder="What decide..." />
 					</div>
+
 				</div>
 
-				<button className={ utilStyles.margin10px }>More Function</button><br />
-				<input className={ utilStyles.margin10px } type="submit" value="Submit" />
+				<button className={`
+					${utilStyles.margin10px}
+					${styles.addButton}
+				`}>
+					More Function
+				</button>
+				<input 
+					className={`
+						${utilStyles.margin10px}
+						${styles.addButton}
+					`} 
+					type="submit" 
+					value="Submit" 
+				/>
 			</form>
 		</div>
 	);
@@ -79,9 +99,13 @@ function AddCardForm() {
 export default function ListCard() {
 	return (
 		<Layout>
+			<Head>
+				<title>Add Card</title>
+			</Head>
+
 			<section>
 
-				<h1>Add Functioning Card</h1>
+				<h1 className={utilStyles.bigHeader}>Add Functioning Card</h1>
 
 				<AddCardForm />
 

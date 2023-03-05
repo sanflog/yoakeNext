@@ -41,7 +41,7 @@ export default function HomePage({ allPostsData }) {
 					</p>
 					<p>
 						<strong>Do you think you are right?<br/>
-						In this state, are we really good on feature?</strong>
+						In this state, are we really good on future?</strong>
 					</p>
 					<p>
 						<strong>Here may show solution for it.</strong>
