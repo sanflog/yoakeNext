@@ -1,11 +1,15 @@
 .addCardButton {
 	height: 10%;
-	font-size: 1.5em;
-	color: black;
-	font-weight: bold;
-	cursor: pointer;
-	text-align: center;
+	width: 400px;
+	margin: auto;
 	padding: 20px;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: black;
+	background-color: #a8ffdb;
+	border-radius: 30px;
+	cursor: pointer;
 }
 
 .addCardForm {
