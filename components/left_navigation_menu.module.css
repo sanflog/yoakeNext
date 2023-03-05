@@ -32,10 +32,6 @@
 	text-align: center;
 
 	transform: translate(-100%, -100%);
-
-	animation-name: slideOut;
-	animation-duration: 0.7s;
-	animation-fill-mode: forwards;
 }
 
 .leftNavigationMenuShow a {

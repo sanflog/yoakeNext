@@ -10,7 +10,6 @@ const LeftNavigationMenu = forwardRef(({leftNavRef, leftNavHiddenHandler}, ref) 
 			className={`
 				${styles.leftNavigationMenuHidden}
 			`}
-			onClick={() => leftNavHiddenHandler()}
 			ref={leftNavRef}
 		>
 			<div className={`
