@@ -1,4 +1,24 @@
-.leftNavigationMenu {
+.leftNavigationMenuShow {
+	position: fixed;
+	left: 0;
+	top: 0;
+	color: #eee;
+	background-color: #111;
+	width: 100%;
+	height: 100vh;
+	opacity: 0;
+	z-index: 999;
+
+	text-align: center;
+
+	transform: translate(-100%, -100%);
+
+	animation-name: slideIn;
+	animation-duration: 0.7s;
+	animation-fill-mode: forwards;
+}
+
+.leftNavigationMenuHidden {
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -7,11 +27,29 @@
 	width: 100%;
 	height: 100vh;
 	opacity: 1;
-	z-index: 999;
+	z-index: 0;
 
-	animation-name: slideIn;
+	text-align: center;
+
+	transform: translate(-100%, -100%);
+
+	animation-name: slideOut;
 	animation-duration: 0.7s;
 	animation-fill-mode: forwards;
+}
+
+.leftNavigationMenuShow a {
+	display: block;
+	font-size: 2em;
+	color: #eee;
+	text-decoration: none;
+}
+
+.leftNavigationMenuShow a:hover {
+	display: block;
+	font-size: 2em;
+	color: #eee;
+	text-decoration: underline;
 }
 
 .leftNavigationContent {
@@ -22,19 +60,6 @@
 
 }
 
-.leftNavigationMenu a {
-	display: block;
-	font-size: 2em;
-	color: #eee;
-}
-
-.leftNavigationMenu a:hover {
-	display: block;
-	font-size: 2em;
-	color: #eee;
-	text-decoration: underline;
-}
-
 .leftNavCloseButton {
 	font-size: 2em;
 	cursor: pointer;
@@ -42,6 +67,23 @@
 }
 
 @keyframes slideIn {
-	0% { transform: translate(-100%, -100%) }
-	100% { transform: translate(0, 0) }
+	0% {
+		transform: translate(0, -100%);
+		opacity: 0;
+	}
+	100% {
+		transform: translate(0, 0);
+		opacity: 1;
+	}
+}
+
+@keyframes slideOut {
+	0% {
+		transform: translate(0, 0);
+		opacity: 1;
+	}
+	100% {
+		transform: translate(0, -100%); 
+		opacity: 0;
+	}
 }

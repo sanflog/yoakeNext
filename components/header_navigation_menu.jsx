@@ -1,16 +1,21 @@
 import Link from 'next/link'
-import { useState } from 'react'
+import { useRef } from 'react'
 
 import LeftNavigationMenu from './left_navigation_menu'
 import style from './header_navigation_menu.module.css'
+import leftNavStayles from './left_navigation_menu.module.css'
 
 import { AiOutlineBulb } from 'react-icons/ai';
 
-export default function headerNavigationMenu() {
-	const [showLeftNav, setShowLeftNav] = useState(false);
+export default function HeaderNavigationMenu() {
+	const leftNavRef = useRef(null);
 
-	function leftNavClickHandler() {
-		setShowLeftNav(!showLeftNav);
+	function leftNavShowHandler() {
+		leftNavRef.current.className = leftNavStayles.leftNavigationMenuShow;
+	}
+
+	function leftNavHiddenHandler() {
+		leftNavRef.current.className = leftNavStayles.leftNavigationMenuHidden;
 	}
 
 	return (
@@ -18,10 +23,9 @@ export default function headerNavigationMenu() {
 			<ul className={style.header}>
 				<li 
 				className={` ${style.headerLeftItem} ${style.headerItem} `}
-				onClick={() => setShowLeftNav(!showLeftNav)}
+				onClick={() => leftNavShowHandler()}
 				>
-					LEFTMENU
-					{showLeftNav ? <LeftNavigationMenu leftNavClickHandler={leftNavClickHandler} /> : null } 
+					MENU
 				</li>
 				<li className={` ${style.headerLeftItem} ${style.headerItem} `}>
 					<Link	href="/">
@@ -32,6 +36,12 @@ export default function headerNavigationMenu() {
 					<AiOutlineBulb />
 				</li>
 			</ul>
+
+			<LeftNavigationMenu 
+				leftNavRef={leftNavRef} 
+				leftNavHiddenHandler={leftNavHiddenHandler} 
+			/>
+
 		</>
 	);
 }
