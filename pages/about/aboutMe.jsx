@@ -22,7 +22,12 @@ export default function About({allPostsData}) {
 				<Head>
 					<title>About Me</title>
 				</Head>
-				<h1>About Me</h1>
+				<h1>About</h1>
+				<p>
+					Hi, I'm Yudai Sasaki. I usually work in a company.<br />
+					I like thinking about the philosophy.
+					These days, I'm studying web skills to becoming web developer.
+				</p>
 			</section>
 		</Layout>
 	);

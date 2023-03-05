@@ -150,6 +150,10 @@
   padding: 20px;
 }
 
+.paddingBottom10px {
+	padding-bottom: 10px;
+}
+
 /*
  * margin
  */

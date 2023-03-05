@@ -1,0 +1,75 @@
+.addCardButton {
+	height: 10%;
+	width: 400px;
+	margin: auto;
+	padding: 20px;
+	text-align: center;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: black;
+	background-color: #a8ffdb;
+	border-radius: 30px;
+	cursor: pointer;
+}
+
+.addCardForm {
+	padding: 10px;
+	margin: 10px;
+	box-shadow: 0 0 1px gray;
+}
+
+.addCardTitle {
+	padding-bottom: 10px;
+}
+
+.addCardInput {
+	border: none;
+	border-bottom: 1px solid gray;
+}
+
+.addCardDetail {
+	padding: 20px;
+}
+
+.addCardDetailItem {
+	padding-bottom: 10px;
+}
+
+.thinkingAnalyzerCard {
+	padding: 10px;
+}
+
+.thinkingAnalyzerCard a {
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.thinkingAnalyzerCard a:hover {
+	text-decoration: none;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.thinkingAnalyzerList {
+	padding-left: 20px;
+}
+
+.detailTarget {
+}
+
+.detailTable {
+	border-collapse: collapse;
+}
+
+.detailTable th{
+	background-color: whiteSmoke;
+	width: 100px;
+	padding: 5px;
+	border: solid 1px black;
+}
+
+.detailTable td{
+	width: 100px;
+	padding: 5px;
+	border: solid 1px black;
+}
