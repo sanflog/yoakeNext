@@ -27,13 +27,10 @@ export default function HomePage({ allPostsData }) {
 			</Head>
 
 			<section className={` ${styles.indexPage}	`}>
-				<div id="indexAnimationCard1" className={styles.textCard}>
-					<p className={styles.centerText}>
-						<strong>Hello, I'm Yudai. <br />
-							This site is showing what my thought.</strong>
-					</p>
-				</div>
-				<BottomFloatMenu />
+				<p>
+					<strong>Hello, I'm Yudai. <br />
+						This site is showing what my thought.</strong>
+				</p>
 			</section>
 		</Layout>
 	);

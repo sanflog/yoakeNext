@@ -1,6 +1,7 @@
 .indexPage {
 	margin: auto;
 	max-width: 40em;
+	height: 100vh;
 }
 
 .indexPage a {

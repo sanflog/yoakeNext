@@ -213,9 +213,9 @@ export default function ThinkingAnalyzer({allPostsData}) {
 						${utilStyles.bigHeader} 
 						${utilStyles.headerFont} 
 					`}>
-					Thinking Analyzer
-				</h2>
-					<p className={ utilStyles.describeToTitle}>
+						Thinking Analyzer
+					</h2>
+					<p className={utilStyles.describeToTitle}>
 						Thinking Analizer is a tool that allow you to structure what you think.<br />
 						Structuring thought is very important to all of your life.
 					</p>

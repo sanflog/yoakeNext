@@ -7,6 +7,7 @@ import utilStyles from '../styles/utils.module.css';
 
 import HeaderNavigationMenu from './header_navigation_menu';
 import BottomFloatMenu from './bottom_float_menu';
+import FooterMenu from './footer_menu';
 
 const name = 'Sasaki Yudai';
 export const siteTitle = "Yoake";
@@ -26,6 +27,7 @@ export default function Layout({ children, home }) {
 			</div>
 
 			<BottomFloatMenu />
+			<FooterMenu />
 		</>
 	);
 }

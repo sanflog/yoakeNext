@@ -45,8 +45,9 @@
 
 .title {
 	margin: 5px;
-	height: 50vh;
+	padding: 20px;
 	width: 100%;
+	min-height: 500px;
 	border-radius: 30px;
 }
 
@@ -54,6 +55,7 @@
 	text-align: center;
 	font-size: 1.5em;
 }
+
 
 /*
  * main contents
