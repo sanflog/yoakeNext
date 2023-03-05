@@ -20,8 +20,6 @@ export default function Layout({ children, home }) {
 				<meta	property="og:image"	content="yoake"	/>
 			</Head>
 
-			<LoadPage />
-
 			<HeaderNavigationMenu />
 
 			<div className={` ${styles.container} ${utilStyles.fadeIn} `}>
