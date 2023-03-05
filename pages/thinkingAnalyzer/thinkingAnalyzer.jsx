@@ -211,7 +211,6 @@ export default function ThinkingAnalyzer({allPostsData}) {
 				`}>
 					<h2 className={`
 						${utilStyles.bigHeader} 
-						${utilStyles.headerFont} 
 					`}>
 						Thinking Analyzer
 					</h2>
@@ -224,7 +223,6 @@ export default function ThinkingAnalyzer({allPostsData}) {
 				<div className={utilStyles.mainArticle}>
 					<h3 className={`
 						${utilStyles.bigHeader}
-						${utilStyles.headerFont} 
 					`}>
 						Let's Add Your Thinking Patern.
 					</h3>
