@@ -101,10 +101,6 @@ export default function ListCard() {
 		setShowForm(!showForm);
 	}
 
-	const cards = list.map((lst, n) => {
-		return <li key={n}><FunctionCard item={lst} /></li>;
-	});
-
 	return (
 		<Layout>
 			<section>

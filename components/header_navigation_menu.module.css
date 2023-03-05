@@ -26,6 +26,7 @@
 }
 
 .headerRightItem {
+	cursor: pointer;
 	list-style: none;
 	padding: 10px;
 	float: right;
