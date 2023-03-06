@@ -21,10 +21,10 @@ export default function ThinkingAnalyzer({allPostsData}) {
 
 				<div className={` 
 					${utilStyles.title} 
-					${utilStyles.bgBlue} 
 				`}>
 					<h2 className={`
 						${utilStyles.bigHeader} 
+						${utilStyles.gradientColorText} 
 					`}>
 						Thinking Analyzer
 					</h2>
@@ -35,7 +35,10 @@ export default function ThinkingAnalyzer({allPostsData}) {
 				</div>
 
 				<Link href="./addCard/addCard">
-					<div className={utilStyles.mainArticle}>
+					<div className={`
+						${utilStyles.mainArticle}
+						${utilStyles.bgGreen}
+					`}>
 						<h3 className={`
 							${utilStyles.bigHeader}
 						`}>
@@ -49,7 +52,10 @@ export default function ThinkingAnalyzer({allPostsData}) {
 				</Link>
 
 				<Link href="./listCard/listCard">
-					<div className={utilStyles.mainArticle}>
+					<div className={`
+						${utilStyles.mainArticle}
+						${utilStyles.bgBlue}
+					`}>
 						<h3 className={`
 							${utilStyles.bigHeader}
 						`}>

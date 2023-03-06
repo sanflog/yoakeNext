@@ -1,6 +1,6 @@
 .footerWrapper {
 	width: 100%;
-	min-height: 200px;
+	min-height: 250px;
 	color: #eee;
 	background-color: #333;
 }
@@ -8,6 +8,12 @@
 .footerContent {
 	padding: 50px;
 }
+
+.footerCol {
+	width: 30%;
+	float: left;
+}
+
 
 .footerContent li {
 	list-style: none;
