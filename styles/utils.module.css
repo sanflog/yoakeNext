@@ -130,7 +130,7 @@
 }
 
 .bgBlue {
-	background-color: #c2c4ff;
+	background-color: #ccdaff;
 }
 
 .bgRed {
@@ -138,7 +138,7 @@
 }
 
 .bgGreen {
-	background-color: #b3edba;
+	background-color: #ccffe0;
 }
 
 
@@ -199,6 +199,10 @@
 /*
  * text
  */
+
+.fs15em {
+	font-size: 1.5em;
+}
  
 .lightText {
   color: #666;
@@ -206,6 +210,11 @@
 
 .textAlign {
 	text-align: center;
+}
+
+.marginAlign {
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .fontBold {
@@ -235,6 +244,13 @@
 /*
  * others
  */
+
+.minWidth500 {
+	min-width: 500px;
+}
+.maxWidth700 {
+	max-width: 700px;
+}
 
 .width36emAndMarginAuto {
 	max-width: 40em;

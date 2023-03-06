@@ -136,6 +136,16 @@ export default function ListCard() {
 			<section>
 
 				<h1 className={utilStyles.bigHeader}>Add Functioning Card</h1>
+				<p 
+					className ={`
+						${utilStyles.maxWidth700}
+						${utilStyles.marginAlign}
+						${utilStyles.fs15em}
+					`}
+				>
+					Here is a page to add function cards.<br />
+					If you add function detail to describe your action,	thought etc...,  you can click "+ Function Card" button.
+				</p>
 
 				<AddCardForm />
 
