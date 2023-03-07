@@ -36,15 +36,14 @@ export default function HomePage({ allPostsData }) {
 						${utilStyles.paddingBottom10px}
 					`}>YOAKE</h1>
 					<p>
-						<strong>Hello, I'm Yudai Sasaki.<br />
-							This site is showing what my thought.</strong>
+						Hello, I'm San.<br />
+						This site is showing what my thought.
 					</p>
 					<p>
-						<strong>Do you think you are right?<br/>
-						In this state, are we really good on future?</strong>
+						Do you think you are right? In this state, are we really good on future?
 					</p>
 					<p>
-						<strong>Here may show solution for it.</strong>
+						Here may show solution for it.
 					</p>
 				</section>
 			</Layout>
