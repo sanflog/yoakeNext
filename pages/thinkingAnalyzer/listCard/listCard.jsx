@@ -39,13 +39,20 @@ const list = [
 	}
 ];
 
+function b() {
+	fetch("https://yoake.herokuapp.com/thinkingAnalyzer/")
+		.then(response => {
+			console.log(response);
+			return response;
+		})
+}
+
 function cardTitleHandler( showCard, setShowCard ) {
 	setShowCard(!showCard);
 }
 
 function FunctionCard({item}) {
 	const [showCard, setShowCard] = useState(false);
-
 	const details = item.detail.map((i, n) => {
 		return (
 			<div key={n}>
@@ -94,9 +101,12 @@ function FunctionCard({item}) {
 }
 
 export default function ListCard() {
+	const [c, setC] = useState(b());
 	const cards = list.map((lst, n) => {
 		return <li key={n}><FunctionCard item={lst} /></li>;
 	});
+
+	console.log(c);
 
 	return (
 		<Layout>

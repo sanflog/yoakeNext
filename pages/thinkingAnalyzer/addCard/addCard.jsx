@@ -40,7 +40,7 @@ function DetailCard() {
 			<div className={ styles.addCardDetailItem }>
 				<label className={ utilStyles.fontBold }>Type for Judgment: </label><br />
 				<input type="radio" id="feeling" name="cType" value="FEELING" />
-				<label>Sight </label>
+				<label>Feeling </label>
 				<input type="radio" id="thinking" name="cType" value="THINKING" />
 				<label>Thinking </label>
 			</div>
