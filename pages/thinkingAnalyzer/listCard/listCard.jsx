@@ -1,121 +1,89 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+
+import Head from 'next/head'
 
 import Layout from '../../../components/layout.jsx';
 
 import utilStyles from '/styles/utils.module.css';
 import styles from './listCard.module.css';
 
-const list = [
-	{ 
-		'title' : 'Test Title',
-		'detail' : [
-			{
-				'target' : 'What',
-				'function' : 'Percieve',
-				'type' : 'Sight',
-				'time' : 'Furture',
-				'decideTo' : 'none',
-			},
-			{
-				'target' : 'Pepar',
-				'function' : 'Judgment',
-				'type' : 'Feeling',
-				'time' : 'none',
-				'decideTo' : 'Value',
-			}
-		]
-	},
-	{ 
-		'title' : 'Hello World',
-		'detail' : [
-			{
-				'target' : 'What',
-				'function' : 'Judging',
-				'type' : 'Thinking',
-				'time' : 'none',
-				'decideTo' : 'Reason',
-			}
-		]
-	}
-];
 
-function b() {
-	fetch("https://yoake.herokuapp.com/thinkingAnalyzer/")
-		.then(response => {
-			console.log(response);
-			return response;
-		})
+function cardTitleHandler( showDetail, setShowDetail ) {
+	setShowDetail(!showDetail);
 }
 
-function cardTitleHandler( showCard, setShowCard ) {
-	setShowCard(!showCard);
-}
 
 function FunctionCard({item}) {
-	const [showCard, setShowCard] = useState(false);
-	const details = item.detail.map((i, n) => {
+	const [showDetail, setShowDetail] = useState(false);
+
+	if (!showDetail) {
 		return (
-			<div key={n}>
-				<div className={ styles.detailTarget }>{n} Target: {i.target}</div>
-				<table className={ styles.detailTable }>
-					<tbody>
-						<tr>
-							<th>Function</th>
-							<th>Type</th>
-							<th>Time</th>
-							<th>Decide To</th>
-						</tr>
-						<tr>
-							<td>{i.function}</td>
-							<td>{i.type}</td>
-							<td>{i.time}</td>
-							<td>{i.decideTo}</td>
-						</tr>
-					</tbody>
-				</table>
+			<div>
+				<h2 onClick={() => cardTitleHandler(showDetail, setShowDetail)}>{item.title}</h2>
 			</div>
 		);
-	});
-
-	if (!showCard) {
+	}else{
 		return (
-			<div className={ styles.thinkingAnalyzerCard }>
-				<a onClick={ () => cardTitleHandler(showCard, setShowCard) }>
-					<div>{item.title}</div>
-				</a>
-			</div>
-		); 
-	} else {
-		return (
-			<div className={ styles.thinkingAnalyzerCard }>
-				<a onClick={ () => cardTitleHandler(showCard, setShowCard) }>
-					<div>{item.title}</div>
-				</a>
-
-				<div className={` ${styles.thinkingAnalyzerList} ${utilStyles.fadeIn} `}>
-					{details}
-				</div>
+			<div>
+				<h2 onClick={() => cardTitleHandler(showDetail, setShowDetail)}>{item.title}</h2>
+				<ul className={utilStyles.list}>
+					<li>Target: {item.target}</li>
+					<li>Function: {item.function}</li>
+					<li>Type: {item.fType}</li>
+					<li>Time: {item.time}</li>
+					<li>Decide To: {item.decideTo}</li>
+				</ul>
 			</div>
 		); 
 	}
 }
 
 export default function ListCard() {
-	const [c, setC] = useState(b());
-	const cards = list.map((lst, n) => {
-		return <li key={n}><FunctionCard item={lst} /></li>;
-	});
+	const [list, setList] = useState({});
 
-	console.log(c);
+	useEffect(() => {
+		fetch('https://yoake.herokuapp.com/thinkingAnalyzer/')
+			.then(res => res.json())
+			.then(data => setList(data))
+	}, []);
 
 	return (
 		<Layout>
+
+			<Head>
+				<title>Thinking Function List</title>
+			</Head>
+
 			<section>
-				<h1>Thinking Functioning List</h1>
-				<ul>
-					{cards}
-				</ul>
+
+				<div className={` 
+					${utilStyles.title} 
+					${utilStyles.bgRed} 
+				`}>
+					<h1
+						className={`
+							${utilStyles.bigHeader} 
+						`}
+					>
+						Thinking Functioning List
+					</h1>
+
+					<p className={utilStyles.describeToTitle}>
+						This page show all Thinking Function Patern which was registered anyone.
+					</p>
+				</div>
+
+				<div
+					className={`
+						${utilStyles.maxWidth700}
+						${utilStyles.marginAlign}
+					`}
+				>
+					<FunctionCard item={list} />
+				</div>
+
 			</section>
+
 		</Layout>
 	);
 }
