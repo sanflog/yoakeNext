@@ -26,13 +26,12 @@ function FunctionCard({item}) {
 		return (
 			<div>
 				<h2 onClick={() => cardTitleHandler(showDetail, setShowDetail)}>{item.title}</h2>
-				<ul className={utilStyles.list}>
-					<li>Target: {item.target}</li>
-					<li>Function: {item.function}</li>
-					<li>Type: {item.fType}</li>
-					<li>Time: {item.time}</li>
-					<li>Decide To: {item.decideTo}</li>
-				</ul>
+				Target: {item.target}
+				Detail: {item.detail}
+				Function: {item.function}
+				Type: {item.fType}
+				Time: {item.time}
+				Decide To: {item.decideTo}
 			</div>
 		); 
 	}
