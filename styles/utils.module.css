@@ -261,8 +261,11 @@
 .card {
 	margin: 20px auto;
 	padding: 15px;
-	width: 50%;
-	height: 120px;
+	width: 100%;
+}
+
+.radius20px {
+	border-radius: 20px;
 }
 
 

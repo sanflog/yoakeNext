@@ -18,24 +18,61 @@ function FunctionCard({item}) {
 
 	if (!showDetail) {
 		return (
-			<div>
+			<div
+				className={`
+					${utilStyles.card}
+					${utilStyles.bgRed}
+					${utilStyles.radius20px}
+				`}
+			>
 				<h2 onClick={() => cardTitleHandler(showDetail, setShowDetail)}>{item.title}</h2>
+				<div className={styles.cardDetail}>
+					{item.detail}
+				</div>
 			</div>
 		);
 	}else{
 		return (
-			<div>
-				<h2 onClick={() => cardTitleHandler(showDetail, setShowDetail)}>{item.title}</h2>
-				Target: {item.target}
-				Detail: {item.detail}
-				Function: {item.function}
-				Type: {item.fType}
-				Time: {item.time}
-				Decide To: {item.decideTo}
+			<div
+				className={`
+					${utilStyles.card}
+					${utilStyles.bgRed}
+					${utilStyles.radius20px}
+				`}
+				onClick={
+					() => {
+						cardTitleHandler(showDetail, setShowDetail)
+					}
+				}
+			>
+				<h2>{item.title}</h2>
+
+				<div className={styles.cardDetail}>
+					{item.detail}
+				</div>
+
+				<div>
+					<span className={styles.cardItem}>
+						{item.target}
+					</span>
+					<span className={styles.cardItem}>
+						{item.function}
+					</span>
+					<span className={styles.cardItem}>
+						{item.fType}
+					</span>
+					<span className={styles.cardItem}>
+						{item.time}
+					</span>
+					<span className={styles.cardItem}>
+						{item.decideTo}
+					</span>
+				</div>
 			</div>
 		); 
 	}
 }
+
 
 export default function ListCard() {
 	const [list, setList] = useState({});
@@ -72,14 +109,7 @@ export default function ListCard() {
 					</p>
 				</div>
 
-				<div
-					className={`
-						${utilStyles.maxWidth700}
-						${utilStyles.marginAlign}
-					`}
-				>
-					<FunctionCard item={list} />
-				</div>
+				<FunctionCard item={list} />
 
 			</section>
 
