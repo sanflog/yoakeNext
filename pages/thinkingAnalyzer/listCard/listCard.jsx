@@ -13,7 +13,7 @@ function cardTitleHandler( showDetail, setShowDetail ) {
 }
 
 
-function FunctionCard({item}) {
+function FunctionCardBack({item}) {
 	const [showDetail, setShowDetail] = useState(false);
 
 	if (!showDetail) {
@@ -27,7 +27,7 @@ function FunctionCard({item}) {
 			>
 				<h2 onClick={() => cardTitleHandler(showDetail, setShowDetail)}>{item.title}</h2>
 				<div className={styles.cardDetail}>
-					{item.detail}
+					{item[0].detail}
 				</div>
 			</div>
 		);
@@ -73,6 +73,27 @@ function FunctionCard({item}) {
 	}
 }
 
+function FunctionCard({item}) {
+	const [showDetail, setShowDetail] = useState(false);
+
+	if (!item) {
+		return <p>Loading...</p>;
+	} else {
+		return (
+			<div
+				className={`
+					${utilStyles.card}
+					${utilStyles.bgRed}
+					${utilStyles.radius20px}
+				`}
+			>
+				{item[0].title}<br />
+				{item[0].detail}<br />
+			</div>
+		);
+
+	}
+}
 
 export default function ListCard() {
 	const [list, setList] = useState({});
@@ -109,7 +130,7 @@ export default function ListCard() {
 					</p>
 				</div>
 
-				<FunctionCard item={list} />
+				<FunctionCard item={list.thinkingFunction}/>
 
 			</section>
 

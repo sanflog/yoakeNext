@@ -1,8 +1,7 @@
 .footerWrapper {
 	width: 100%;
 	min-height: 250px;
-	color: #eee;
-	background-color: #333;
+	color: #333;
 }
 
 .footerContent {
@@ -22,10 +21,10 @@
 
 .footerContent a {
 	text-decoration: none;
-	color: #eee;
+	color: #333;
 }
 
 .footerContent a:hover {
 	text-decoration: underline;
-	color: #999;
+	color: #000;
 }
