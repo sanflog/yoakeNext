@@ -13,85 +13,63 @@ function cardTitleHandler( showDetail, setShowDetail ) {
 }
 
 
-function FunctionCardBack({item}) {
-	const [showDetail, setShowDetail] = useState(false);
+function FunctionDetailCard({ mainTitle, functionDetail }) {
+	const details = functionDetail.map((fDetail) => {
+		if (mainTitle === fDetail.thinkingFunction_id) {
+			return (
+				<ul key={fDetail.detailNo}>
+					<li>{fDetail.detailNo}</li>
+					<li>{fDetail.target}</li>
+					<li>{fDetail.function}</li>
+					<li>{fDetail.fType}</li>
+					<li>{fDetail.time}</li>
+					<li>{fDetail.decideTo}</li>
+				</ul>
+			);
+		}
+	});
 
-	if (!showDetail) {
-		return (
-			<div
-				className={`
-					${utilStyles.card}
-					${utilStyles.bgRed}
-					${utilStyles.radius20px}
-				`}
-			>
-				<h2 onClick={() => cardTitleHandler(showDetail, setShowDetail)}>{item.title}</h2>
-				<div className={styles.cardDetail}>
-					{item[0].detail}
-				</div>
-			</div>
-		);
-	}else{
-		return (
-			<div
-				className={`
-					${utilStyles.card}
-					${utilStyles.bgRed}
-					${utilStyles.radius20px}
-				`}
-				onClick={
-					() => {
-						cardTitleHandler(showDetail, setShowDetail)
-					}
-				}
-			>
-				<h2>{item.title}</h2>
-
-				<div className={styles.cardDetail}>
-					{item.detail}
-				</div>
-
-				<div>
-					<span className={styles.cardItem}>
-						{item.target}
-					</span>
-					<span className={styles.cardItem}>
-						{item.function}
-					</span>
-					<span className={styles.cardItem}>
-						{item.fType}
-					</span>
-					<span className={styles.cardItem}>
-						{item.time}
-					</span>
-					<span className={styles.cardItem}>
-						{item.decideTo}
-					</span>
-				</div>
-			</div>
-		); 
-	}
+	return (
+		<>
+			{details}
+		</>
+	);
 }
 
-function FunctionCard({item}) {
-	const [showDetail, setShowDetail] = useState(false);
+function FunctionCard({functionMain, functionDetail}) {
+	if (functionMain && functionDetail) {
+		const cards = functionMain.map((fMain) => {
+			return (
+				<div 
+					className={` 
+						${utilStyles.card} 
+						${utilStyles.bgRed} 
+						${utilStyles.radius20px} 
+					`}
+					key={fMain.title}
+				>
 
-	if (!item) {
-		return <p>Loading...</p>;
-	} else {
+					<h1>{fMain.title}</h1>
+					<div className={styles.cardDetail}>
+						<p>{fMain.detail}</p>
+					</div>
+
+					<FunctionDetailCard
+						mainTitle={fMain.title} 
+						functionDetail={functionDetail} 
+					/>
+
+				</div>
+			);
+		});
+
 		return (
-			<div
-				className={`
-					${utilStyles.card}
-					${utilStyles.bgRed}
-					${utilStyles.radius20px}
-				`}
-			>
-				{item[0].title}<br />
-				{item[0].detail}<br />
-			</div>
+			<>
+				{cards}
+			</>
 		);
-
+	} else {
+		return <p>Loading...</p>;
 	}
 }
 
@@ -130,7 +108,10 @@ export default function ListCard() {
 					</p>
 				</div>
 
-				<FunctionCard item={list.thinkingFunction}/>
+				<FunctionCard 
+					functionMain={list.thinkingFunction} 
+					functionDetail={list.thinkingFunctionDetail} 
+				/>
 
 			</section>
 

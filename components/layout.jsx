@@ -12,7 +12,7 @@ import FooterMenu from './footer_menu';
 
 export const siteTitle = "Yoake";
 
-export default function Layout({ children, home }) {
+export default function Layout({ children }) {
 	return (
 		<>
 			<Head>
