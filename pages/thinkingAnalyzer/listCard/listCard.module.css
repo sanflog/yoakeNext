@@ -1,10 +1,32 @@
+.cardTitle {
+	padding: 10px;
+	background-color: #ffedf6;
+	border-radius: 10px;
+}
+
 .cardDetail {
 	font-size: 1.2em;
 	padding: 10px 0;
 	word-wrap: break-word;
 }
 
-.cardItem {
-	font-size: 1.2em;
-	padding: 10px 10px;
+.cardTable {
+	margin-bottom: 20px;
+}
+
+.cardTable tr {
+}
+
+.cardTable td {
+	padding: 5px;
+	background-color: #eee;
+	border-radius: 10px;
+}
+
+.cardTable .cardTableFirstCol {
+	width: 150px;
+}
+
+.cardTable .cardTableSecondCol {
+	width: 500px;
 }

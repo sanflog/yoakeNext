@@ -17,14 +17,34 @@ function FunctionDetailCard({ mainTitle, functionDetail }) {
 	const details = functionDetail.map((fDetail) => {
 		if (mainTitle === fDetail.thinkingFunction_id) {
 			return (
-				<ul key={fDetail.detailNo}>
-					<li>{fDetail.detailNo}</li>
-					<li>{fDetail.target}</li>
-					<li>{fDetail.function}</li>
-					<li>{fDetail.fType}</li>
-					<li>{fDetail.time}</li>
-					<li>{fDetail.decideTo}</li>
-				</ul>
+				<table key={fDetail.detailNo} className={styles.cardTable}>
+					<tbody>
+						<tr>
+							<td className={styles.cardTableFirstCol}>Detail No</td>
+							<td className={styles.cardTableSecondCol}>{fDetail.detailNo}</td>
+						</tr>
+						<tr>
+							<td>Target</td>
+							<td>{fDetail.target}</td>
+						</tr>
+						<tr>
+							<td>Function</td>
+							<td>{fDetail.function}</td>
+						</tr>
+						<tr>
+							<td>Type</td>
+							<td>{fDetail.fType}</td>
+						</tr>
+						<tr>
+							<td>Time</td>
+							<td>{fDetail.time}</td>
+						</tr>
+						<tr>
+							<td>Decide To</td>
+							<td>{fDetail.decideTo}</td>
+						</tr>
+					</tbody>
+				</table>
 			);
 		}
 	});
@@ -43,16 +63,13 @@ function FunctionCard({functionMain, functionDetail}) {
 				<div 
 					className={` 
 						${utilStyles.card} 
-						${utilStyles.bgRed} 
 						${utilStyles.radius20px} 
 					`}
 					key={fMain.title}
 				>
 
-					<h1>{fMain.title}</h1>
-					<div className={styles.cardDetail}>
-						<p>{fMain.detail}</p>
-					</div>
+					<h1 className={styles.cardTitle}>{fMain.title}</h1>
+					<p className={styles.cardDetail}>{fMain.detail}</p>
 
 					<FunctionDetailCard
 						mainTitle={fMain.title} 
