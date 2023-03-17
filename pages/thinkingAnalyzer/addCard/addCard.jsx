@@ -18,43 +18,43 @@ function DetailCard({ no }) {
 
 			<div className={ styles.addCardDetailItem }>
 				<label className={ utilStyles.fontBold }>Function: </label><br />
-				<input type="radio" id={"judgment" + no} name="cFunction" value="JUDGMENT" />
+				<input type="radio" id={"judgment" + no} name={"cFunction" + no} value="JUDGMENT" />
 				<label>Judgment </label>
-				<input type="radio" id={"preceive" + no} name="cFunction" value="PERCEIVE" />
+				<input type="radio" id={"preceive" + no} name={"cFunction" + no} value="PERCEIVE" />
 				<label>Pecveive </label>
 			</div>
 
 			<div className={ styles.addCardDetailItem }>
 				<label className={ utilStyles.fontBold }>Type for Perceive: </label><br />
-				<input type="radio" id={"sight" + no} name="cType" value="SIGHT" />
+				<input type="radio" id={"sight" + no} name={"cType" + no} value="SIGHT" />
 				<label>Sight </label>
-				<input type="radio" id={"sound" + no} name="cType" value="SOUND" />
+				<input type="radio" id={"sound" + no} name={"cType" + no} value="SOUND" />
 				<label>Sound </label>
-				<input type="radio" id={"touch" + no} name="cType" value="TOUCH" />
+				<input type="radio" id={"touch" + no} name={"cType" + no} value="TOUCH" />
 				<label>Touch </label>
-				<input type="radio" id={"smell" + no} name="cType" value="SMELL" />
+				<input type="radio" id={"smell" + no} name={"cType" + no} value="SMELL" />
 				<label>Smell </label>
-				<input type="radio" id={"taste" + no} name="cType" value="TASTE" />
+				<input type="radio" id={"taste" + no} name={"cType" + no} value="TASTE" />
 				<label>Taste </label>
 			</div>
 
 			<div className={ styles.addCardDetailItem }>
 				<label className={ utilStyles.fontBold }>Type for Judgment: </label><br />
-				<input type="radio" id={"feeling" + no} name="cType" value="FEELING" />
+				<input type="radio" id={"feeling" + no} name={"cType" + no} value="FEELING" />
 				<label>Feeling </label>
-				<input type="radio" id={"thinking" + no} name="cType" value="THINKING" />
+				<input type="radio" id={"thinking" + no} name={"cType" + no} value="THINKING" />
 				<label>Thinking </label>
 			</div>
 
 			<div className={ styles.addCardDetailItem }>
 				<label className={ utilStyles.fontBold }>Time: </label><br />
-				<input type="radio" id={"past" + no} name="cTime" value="PAST" />
+				<input type="radio" id={"past" + no} name={"cTime" + no} value="PAST" />
 				<label>Past </label>
-				<input type="radio" id={"now" + no} name="cTime" value="NOW" />
+				<input type="radio" id={"now" + no} name={"cTime" + no} value="NOW" />
 				<label>Now </label>
-				<input type="radio" id={"Feature" + no} name="cTime" value="FEATURE" />
+				<input type="radio" id={"Feature" + no} name={"cTime" + no} value="FEATURE" />
 				<label>Feature </label>
-				<input type="radio" id={"possibility" + no} name="cTime" value="POSSIBILITY" />
+				<input type="radio" id={"possibility" + no} name={"cTime" + no} value="POSSIBILITY" />
 				<label>Possibility </label>
 			</div>
 
@@ -88,11 +88,11 @@ function AddCardForm() {
 
 	return (
 		<div className={` ${styles.addCardForm} ${utilStyles.fadeIn} `} >
-			<form action="https://yoake.herokuapp.com/thinkingAnalyzer/addFunctionCard/" method="get">
+			<form action="https://yoake.herokuapp.com/thinkingAnalyzer/addFunctionCard/" method="post">
 
 				<div className={ styles.addCardTitle }>
 					<label className={ utilStyles.fontBold }>Title: </label><br />
-					<input className={ styles.addCardInput } id="title" name={"title"} type="text" placeholder="Title..." />
+					<input className={ styles.addCardInput } id="title" name="title" type="text" placeholder="Title..." />
 				</div>
 
 				<div className={ styles.addCardTitle }>
