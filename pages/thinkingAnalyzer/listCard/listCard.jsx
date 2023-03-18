@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 
-import Head from 'next/head'
+import Head from 'next/head';
+import Link from 'next/link';
 
 import Layout from '../../../components/layout.jsx';
 
@@ -58,7 +59,8 @@ function FunctionDetailCard({ mainTitle, functionDetail }) {
 
 function FunctionCard({functionMain, functionDetail}) {
 	if (functionMain && functionDetail) {
-		const cards = functionMain.map((fMain) => {
+		const reverseMain = functionMain.reverse();
+		const cards = reverseMain.map((fMain) => {
 			return (
 				<div 
 					className={` 
@@ -123,6 +125,7 @@ export default function ListCard() {
 					<p className={utilStyles.describeToTitle}>
 						This page show all Thinking Function Patern which was registered anyone.
 					</p>
+					<Link href="/thinkingAnalyzer/addCard/addCard">Add Card</Link>
 				</div>
 
 				<FunctionCard 
