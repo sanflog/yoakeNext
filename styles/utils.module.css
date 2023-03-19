@@ -135,6 +135,7 @@
 
 .bgBlue2 {
 	background-color: #e6f0f5;
+	box-shadow: 0 0 10px #e6f0f5;
 }
 
 .bgPerple {
@@ -149,6 +150,10 @@
 	background-color: #ccffe0;
 }
 
+.bgGreen2 {
+	background-color: #ebfff0;
+	box-shadow: 0 0 10px #ebfff0;
+}
 
 /*
  * padding

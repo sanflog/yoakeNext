@@ -37,7 +37,7 @@ export default function ThinkingAnalyzer({allPostsData}) {
 				<Link href="./addCard/addCard">
 					<div className={`
 						${utilStyles.mainArticle}
-						${utilStyles.bgGreen}
+						${utilStyles.bgGreen2}
 					`}>
 						<h3 className={`
 							${utilStyles.bigHeader}
@@ -54,7 +54,7 @@ export default function ThinkingAnalyzer({allPostsData}) {
 				<Link href="./listCard/listCard">
 					<div className={`
 						${utilStyles.mainArticle}
-						${utilStyles.bgBlue}
+						${utilStyles.bgBlue2}
 					`}>
 						<h3 className={`
 							${utilStyles.bigHeader}
