@@ -3,9 +3,25 @@ import { useState } from 'react';
 import utilStyles from '/styles/utils.module.css';
 import styles from './functionCard.module.css';
 
+
 function cardTitleHandler( showDetailCard, setShowDetailCard ) {
 	setShowDetailCard(!showDetailCard);
 }
+
+
+function deleteCard(url, title) {
+	const requestOptions = {
+		method: 'POST',
+		mode: 'cors',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify({ 'title' : title }),
+	};
+
+	fetch(url, requestOptions);
+}
+
 
 function FunctionDetailCard({ mainTitle, functionDetail }) {
 	const [showDetailCard, setShowDetailCard] = useState(false);
@@ -51,13 +67,22 @@ function FunctionDetailCard({ mainTitle, functionDetail }) {
 				<button 
 					className={styles.detailButton}
 					onClick={
-						() => cardTitleHandler(showDetailCard, setShowDetailCard)
+						() => deleteCard("https://yoake.herokuapp.com/thinkingAnalyzer/deleteFunctionCard/", mainTitle)
 					}
 				>
 					&or; Hidden Detail
 				</button>
 
 				{details}
+
+			<button 
+				className={styles.detailButton}
+				onClick={
+					() => cardTitleHandler(showDetailCard, setShowDetailCard)
+				}
+			>
+				&gt;&gt; DELETE 
+			</button>
 			</>
 		);
 	} else {

@@ -131,6 +131,7 @@
 
 .bgBlue {
 	background-color: #ccdaff;
+	box-shadow: 0 0 10px 5px #ccdaff;
 }
 
 .bgBlue2 {
@@ -145,10 +146,12 @@
 
 .bgRed {
 	background-color: #ffe6e9;
+	box-shadow: 0 0 10px 5px #ffe6e9;
 }
 
 .bgGreen {
 	background-color: #ccffe0;
+	box-shadow: 0 0 10px 5px #ccffe0;
 }
 
 .bgGreen2 {
