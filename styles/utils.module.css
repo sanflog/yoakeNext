@@ -139,7 +139,8 @@
 }
 
 .bgPerple {
-	background-color: #f1e6f5;
+	background-color: #ebe4ed;
+	box-shadow: 0 0 10px #ebe4ed;
 }
 
 .bgRed {
@@ -151,8 +152,8 @@
 }
 
 .bgGreen2 {
-	background-color: #ebfff0;
-	box-shadow: 0 0 10px #ebfff0;
+	background-color: #e4f5e8;
+	box-shadow: 0 0 10px #e4f5e8;
 }
 
 /*
