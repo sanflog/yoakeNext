@@ -8,6 +8,7 @@
 	margin: 20px 0 20px 0;
 	border-radius: 20px;
 	background-color: #ffe3c2;
+	box-shadow: 0 0 10px 5px #ffe3c2;
 }
 
 .addCardTitle textarea{
@@ -38,6 +39,7 @@
 	padding: 20px;
 	border-radius: 30px;
 	background-color: #ffe3c2;
+	box-shadow: 0 0 10px 5px #ffe3c2;
 }
 
 .addCardDetailItem {

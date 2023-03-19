@@ -54,7 +54,7 @@ function FunctionDetailCard({ mainTitle, functionDetail }) {
 						() => cardTitleHandler(showDetailCard, setShowDetailCard)
 					}
 				>
-					&gt; Hidden Detail
+					&or; Hidden Detail
 				</button>
 
 				{details}
