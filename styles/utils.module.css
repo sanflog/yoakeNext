@@ -133,6 +133,14 @@
 	background-color: #ccdaff;
 }
 
+.bgBlue2 {
+	background-color: #e6f0f5;
+}
+
+.bgPerple {
+	background-color: #f1e6f5;
+}
+
 .bgRed {
 	background-color: #ffe6e9;
 }
@@ -259,8 +267,8 @@
 }
 
 .card {
-	margin: 20px auto;
-	padding: 15px;
+	margin: 10px auto;
+	padding: 10px;
 	width: 100%;
 }
 

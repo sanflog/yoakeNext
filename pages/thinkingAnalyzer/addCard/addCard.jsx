@@ -149,7 +149,12 @@ export default function ListCard() {
 					Here is a page to add function cards.<br />
 					If you add function detail to describe your action,	thought etc...,  you can click "+ Function Card" button.
 				</p>
-				<Link href="/thinkingAnalyzer/listCard/listCard">List Card</Link>
+
+				<p className={utilStyles.describeToTitle}>
+					<Link href="/thinkingAnalyzer/listCard/listCard">
+						&gt;&gt; Check Function Card List &lt;&lt;
+					</Link>
+				</p>
 
 				<AddCardForm />
 

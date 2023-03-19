@@ -1,0 +1,45 @@
+.cardTitle {
+	margin: 0;
+	padding: 0;
+	border-bottom: 1px solid #231e82;
+}
+
+.cardDetail {
+	margin: 0;
+	font-size: 1em;
+	padding: 10px 0;
+	word-wrap: break-word;
+}
+
+.detailButton {
+	color: #333;
+	background-color: inherit;
+	border: none;
+	cursor: pointer;
+	margin: 0;
+	padding-bottom: 10px;
+}
+
+
+.cardTable {
+	margin-bottom: 20px;
+	background-color: #fefefe;
+	border-radius: 10px;
+	border-collapse: collapse;
+}
+
+.cardTable tr {
+	border-bottom: 1px solid black;
+}
+
+.cardTable td {
+	padding: 5px;
+}
+
+.cardTable .cardTableFirstCol {
+	width: 150px;
+}
+
+.cardTable .cardTableSecondCol {
+	width: 500px;
+}
