@@ -93,43 +93,101 @@ function FunctionDetailCard({ mainTitle, functionDetail }) {
 	}
 }
 
-export default function FunctionCard({functionMain, functionDetail}) {
-	if (functionMain && functionDetail) {
-		const reverseMain = functionMain.reverse();
+export default function FunctionCard() {
+	const [list, setList] = useState({});
+	const [filteredList, setFilteredList] = useState({});
 
-		const	cards = reverseMain.map((fMain) => {
+	useEffect(() => {
+		fetch('https://yoake.herokuapp.com/thinkingAnalyzer/')
+			.then(res => res.json())
+			.then(data => setList(data))
+	}, []);
+
+	if (!filteredList) {
+		const functionMain = list.thinkingFunction;
+		const functionDetail = list.thinkingFunctionDetail;
+
+		if (functionMain && functionDetail) {
+			const reverseMain = functionMain.reverse();
+
+			const	cards = reverseMain.map((fMain) => {
+				return (
+					<div 
+						className={` 
+							${utilStyles.card} 
+							${utilStyles.radius20px} 
+							${utilStyles.bgPerple} 
+						`}
+						key={fMain.title}
+					>
+
+					<h3 className={`
+						${styles.cardTitle}
+					`}>
+						{fMain.title}
+					</h3>
+						<p className={styles.cardDetail}>{fMain.detail}</p>
+
+						<FunctionDetailCard
+							mainTitle={fMain.title} 
+							functionDetail={functionDetail} 
+						/>
+
+					</div>
+				);
+			});
+
 			return (
-				<div 
-					className={` 
-						${utilStyles.card} 
-						${utilStyles.radius20px} 
-						${utilStyles.bgPerple} 
-					`}
-					key={fMain.title}
-				>
-
-				<h3 className={`
-					${styles.cardTitle}
-				`}>
-					{fMain.title}
-				</h3>
-					<p className={styles.cardDetail}>{fMain.detail}</p>
-
-					<FunctionDetailCard
-						mainTitle={fMain.title} 
-						functionDetail={functionDetail} 
-					/>
-
-				</div>
+				<>
+					{cards}
+				</>
 			);
-		});
+		} else {
+			return <p>Loading...</p>;
+		}
 
-		return (
-			<>
-				{cards}
-			</>
-		);
 	} else {
-		return <p>Loading...</p>;
+
+		const functionMain = filteredList.thinkingFunction;
+		const functionDetail = filteredList.thinkingFunctionDetail;
+
+		if (functionMain && functionDetail) {
+			const reverseMain = functionMain.reverse();
+
+			const	cards = reverseMain.map((fMain) => {
+				return (
+					<div 
+						className={` 
+							${utilStyles.card} 
+							${utilStyles.radius20px} 
+							${utilStyles.bgPerple} 
+						`}
+						key={fMain.title}
+					>
+
+					<h3 className={`
+						${styles.cardTitle}
+					`}>
+						{fMain.title}
+					</h3>
+						<p className={styles.cardDetail}>{fMain.detail}</p>
+
+						<FunctionDetailCard
+							mainTitle={fMain.title} 
+							functionDetail={functionDetail} 
+						/>
+
+					</div>
+				);
+			});
+
+			return (
+				<>
+					{cards}
+				</>
+			);
+		} else {
+			return <p>Loading...</p>;
+		}
 	}
 }

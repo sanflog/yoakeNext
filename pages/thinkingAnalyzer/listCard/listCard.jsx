@@ -11,14 +11,6 @@ import styles from './listCard.module.css';
 
 
 export default function ListCard() {
-	const [list, setList] = useState({});
-
-	useEffect(() => {
-		fetch('https://yoake.herokuapp.com/thinkingAnalyzer/')
-			.then(res => res.json())
-			.then(data => setList(data))
-	}, []);
-
 	return (
 		<Layout>
 
@@ -52,10 +44,7 @@ export default function ListCard() {
 				</div>
 
 				<div className={styles.functionCard}>
-					<FunctionCard 
-						functionMain={list.thinkingFunction} 
-						functionDetail={list.thinkingFunctionDetail} 
-					/>
+					<FunctionCard />
 				</div>
 
 			</section>
