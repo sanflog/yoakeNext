@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
 import utilStyles from '/styles/utils.module.css';
 import styles from './functionCard.module.css';
@@ -67,7 +67,7 @@ function FunctionDetailCard({ mainTitle, functionDetail }) {
 				<button 
 					className={styles.detailButton}
 					onClick={
-						() => deleteCard("https://yoake.herokuapp.com/thinkingAnalyzer/deleteFunctionCard/", mainTitle)
+						() => cardTitleHandler(showDetailCard, setShowDetailCard)
 					}
 				>
 					&or; Hidden Detail
@@ -75,14 +75,10 @@ function FunctionDetailCard({ mainTitle, functionDetail }) {
 
 				{details}
 
-			<button 
-				className={styles.detailButton}
-				onClick={
-					() => cardTitleHandler(showDetailCard, setShowDetailCard)
-				}
-			>
-				&gt;&gt; DELETE 
-			</button>
+			<form action="https://yoake.herokuapp.com/thinkingAnalyzer/deleteFunctionCard/" method="post">
+				<input type="text" name="title" value={mainTitle} />
+				<input type="submit" value="DELETE" />
+			</form>
 			</>
 		);
 	} else {
