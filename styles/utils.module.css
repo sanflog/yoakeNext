@@ -285,6 +285,10 @@
 	border-radius: 20px;
 }
 
+.hiddenField {
+	display: none;
+}
+
 
 /*
  * Animation

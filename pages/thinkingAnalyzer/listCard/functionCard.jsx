@@ -9,20 +9,6 @@ function cardTitleHandler( showDetailCard, setShowDetailCard ) {
 }
 
 
-function deleteCard(url, title) {
-	const requestOptions = {
-		method: 'POST',
-		mode: 'cors',
-		headers: {
-			'Content-Type': 'application/json',
-		},
-		body: JSON.stringify({ 'title' : title }),
-	};
-
-	fetch(url, requestOptions);
-}
-
-
 function FunctionDetailCard({ mainTitle, functionDetail }) {
 	const [showDetailCard, setShowDetailCard] = useState(false);
 
@@ -75,9 +61,21 @@ function FunctionDetailCard({ mainTitle, functionDetail }) {
 
 				{details}
 
-			<form action="https://yoake.herokuapp.com/thinkingAnalyzer/deleteFunctionCard/" method="post">
-				<input type="text" name="title" value={mainTitle} />
-				<input type="submit" value="DELETE" />
+			<form 
+				action="https://yoake.herokuapp.com/thinkingAnalyzer/deleteFunctionCard/" 
+				method="post"
+			>
+				<input 
+					type="text" 
+					name="title" 
+					value={mainTitle} 
+					className={utilStyles.hiddenField}
+				/>
+				<input 
+					type="submit" 
+					value=">>DELETE" 
+					className={styles.deleteButton}
+				/>
 			</form>
 			</>
 		);
