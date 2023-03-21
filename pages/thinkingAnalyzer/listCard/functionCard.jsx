@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 
 import utilStyles from '/styles/utils.module.css';
 import styles from './functionCard.module.css';
@@ -95,7 +95,7 @@ function FunctionDetailCard({ mainTitle, functionDetail }) {
 
 export default function FunctionCard() {
 	const [list, setList] = useState({});
-	const [filteredList, setFilteredList] = useState({});
+	const [filteredList, setFilteredList] = useState(null);
 
 	useEffect(() => {
 		fetch('https://yoake.herokuapp.com/thinkingAnalyzer/')
@@ -104,10 +104,11 @@ export default function FunctionCard() {
 	}, []);
 
 	if (!filteredList) {
-		const functionMain = list.thinkingFunction;
-		const functionDetail = list.thinkingFunctionDetail;
 
-		if (functionMain && functionDetail) {
+		if (list.thinkingFunction && list.thinkingFunctionDetail) {
+			const functionMain = list.thinkingFunction;
+			const functionDetail = list.thinkingFunctionDetail;
+
 			const reverseMain = functionMain.reverse();
 
 			const	cards = reverseMain.map((fMain) => {
