@@ -159,9 +159,16 @@
 	box-shadow: 0 0 10px 5px #e4f5e8;
 }
 
+.bgGray {
+	background-color: #dfdfdf;
+	box-shadow: 0 0 10px 5px #dfdfdf;
+}
+
+
 /*
  * padding
  */
+
 .padding1px {
   padding-top: 1px;
 }
