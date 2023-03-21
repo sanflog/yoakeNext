@@ -24,9 +24,6 @@ export default function ListCard() {
 					${utilStyles.title} 
 				`}>
 					<h1
-						className={`
-							${utilStyles.bigHeader} 
-						`}
 					>
 						Thinking Functioning List
 					</h1>
