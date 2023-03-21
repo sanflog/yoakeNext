@@ -1,11 +1,30 @@
 import { useEffect, useState } from 'react';
 
+import Searcher from './searcher';
+
 import utilStyles from '/styles/utils.module.css';
 import styles from './functionCard.module.css';
 
 
 function cardTitleHandler( showDetailCard, setShowDetailCard ) {
 	setShowDetailCard(!showDetailCard);
+}
+
+function searchClickHandler( searchStrings, setFilteredList ) {
+	const url = 'https://yoake.herokuapp.com/thinkingAnalyzer/';
+	const obj = { 'searchStrings' : searchStrings };
+
+	fetch(url, {
+		'method' : 'POST',
+		'headers' : {
+			'Accept' : 'application/json',
+			'Content-Type' : 'application/json',
+			'origin' : 'cors',
+		},
+		'body' : JSON.stringify(obj)
+	})
+	.then(res => res.json())
+	.then(data => setFilteredList(data))
 }
 
 
@@ -97,6 +116,8 @@ export default function FunctionCard() {
 	const [list, setList] = useState({});
 	const [filteredList, setFilteredList] = useState(null);
 
+	const [searchStrings, setSearchStrings] = useState('');
+
 	useEffect(() => {
 		fetch('https://yoake.herokuapp.com/thinkingAnalyzer/')
 			.then(res => res.json())
@@ -133,13 +154,20 @@ export default function FunctionCard() {
 							mainTitle={fMain.title} 
 							functionDetail={functionDetail} 
 						/>
-
 					</div>
 				);
 			});
 
 			return (
 				<>
+					<div className={styles.descriptionSearcher}>
+						<Searcher 
+							searchStrings={searchStrings} 
+							setSearchStrings={setSearchStrings} 
+							searchClickHandler={searchClickHandler}
+							setFilteredList={setFilteredList}
+						/>
+					</div>
 					{cards}
 				</>
 			);
@@ -177,13 +205,19 @@ export default function FunctionCard() {
 							mainTitle={fMain.title} 
 							functionDetail={functionDetail} 
 						/>
-
 					</div>
 				);
 			});
 
 			return (
 				<>
+					<div className={styles.descriptionSearcher}>
+						<Searcher 
+							searchStrings={searchStrings} 
+							setSearchStrings={setSearchStrings} 
+							searchClickHandler={searchClickHandler}
+						/>
+					</div>
 					{cards}
 				</>
 			);

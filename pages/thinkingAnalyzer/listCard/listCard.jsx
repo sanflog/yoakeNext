@@ -5,7 +5,6 @@ import Link from 'next/link';
 
 import Layout from '../../../components/layout.jsx';
 import FunctionCard from './functionCard';
-import Searcher from './searcher';
 
 import utilStyles from '/styles/utils.module.css';
 import styles from './listCard.module.css';
@@ -43,10 +42,6 @@ export default function ListCard() {
 						</p>
 					</div>
 
-				</div>
-
-				<div className={styles.descriptionSearcher}>
-					<Searcher />
 				</div>
 
 				<div className={styles.functionCard}>

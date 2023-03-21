@@ -50,14 +50,16 @@ function DetailCard({ no }) {
 
 			<div className={ styles.addCardDetailItem }>
 				<label className={ utilStyles.fontBold }>Time: </label><br />
-				<input type="radio" id={"past" + no} name={"cTime" + no} value="PAST" />
+				<input type="radio" id={"past" + no} name={"cTime" + no} value="Past" />
 				<label>Past </label>
-				<input type="radio" id={"now" + no} name={"cTime" + no} value="NOW" />
+				<input type="radio" id={"now" + no} name={"cTime" + no} value="Now" />
 				<label>Now </label>
-				<input type="radio" id={"Feature" + no} name={"cTime" + no} value="FEATURE" />
+				<input type="radio" id={"Feature" + no} name={"cTime" + no} value="Feature" />
 				<label>Feature </label>
-				<input type="radio" id={"possibility" + no} name={"cTime" + no} value="POSSIBILITY" />
+				<input type="radio" id={"possibility" + no} name={"cTime" + no} value="Possibility" />
 				<label>Possibility </label>
+				<input type="radio" id={"None" + no} name={"cTime" + no} value="None" />
+				<label>None </label>
 			</div>
 
 			<div className={ styles.addCardDetailItem }>
