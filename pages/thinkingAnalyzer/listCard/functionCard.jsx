@@ -10,19 +10,10 @@ function cardTitleHandler( showDetailCard, setShowDetailCard ) {
 	setShowDetailCard(!showDetailCard);
 }
 
-function searchClickHandler( searchStrings, setFilteredList ) {
-	const url = 'https://yoake.herokuapp.com/thinkingAnalyzer/';
-	const obj = { 'searchStrings' : searchStrings };
+async function searchClickHandler( searchStrings, setFilteredList ) {
+	const url = 'https://yoake.herokuapp.com/thinkingAnalyzer/searchFunctionCard?searchStrings=' + searchStrings ;
 
-	fetch(url, {
-		'method' : 'POST',
-		'headers' : {
-			'Accept' : 'application/json',
-			'Content-Type' : 'application/json',
-			'origin' : 'cors',
-		},
-		'body' : JSON.stringify(obj)
-	})
+	await fetch(url)
 	.then(res => res.json())
 	.then(data => setFilteredList(data))
 }
