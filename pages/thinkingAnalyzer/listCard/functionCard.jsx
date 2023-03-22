@@ -11,7 +11,7 @@ function cardTitleHandler( showDetailCard, setShowDetailCard ) {
 }
 
 async function searchClickHandler( searchStrings, setFilteredList ) {
-	const url = 'https://yoake.herokuapp.com/thinkingAnalyzer/searchFunctionCard?searchStrings=' + searchStrings ;
+	const url = 'https://yoake.herokuapp.com/thinkingAnalyzer/searchFunctionCard?searchStrings=a';
 
 	await fetch(url)
 	.then(res => res.json())
