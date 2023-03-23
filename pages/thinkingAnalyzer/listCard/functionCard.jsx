@@ -10,12 +10,16 @@ function cardTitleHandler( showDetailCard, setShowDetailCard ) {
 	setShowDetailCard(!showDetailCard);
 }
 
-async function searchClickHandler( searchStrings, setFilteredList ) {
-	const url = 'https://yoake.herokuapp.com/thinkingAnalyzer/searchFunctionCard?searchStrings=a';
+function searchClickHandler( searchStrings, setFilteredList ) {
+	const url = 'https://yoake.herokuapp.com/thinkingAnalyzer/searchFunctionCard/?searchStrings=' + searchStrings;
 
-	await fetch(url)
+	fetch(url)
 	.then(res => res.json())
-	.then(data => setFilteredList(data))
+		.then(data => {
+			console.log(data);
+			setFilteredList(data)
+		})
+	.catch(e => console.error(e))
 }
 
 
@@ -207,6 +211,7 @@ export default function FunctionCard() {
 							searchStrings={searchStrings} 
 							setSearchStrings={setSearchStrings} 
 							searchClickHandler={searchClickHandler}
+							setFilteredList={setFilteredList}
 						/>
 					</div>
 					{cards}
