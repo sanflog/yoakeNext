@@ -10,14 +10,14 @@ function cardTitleHandler( showDetailCard, setShowDetailCard ) {
 	setShowDetailCard(!showDetailCard);
 }
 
-function searchClickHandler( searchStrings, setFilteredList ) {
+function searchClickHandler( searchStrings, setFilteredFunctionMain, setFilteredFunctionDetail ) {
 	const url = 'https://yoake.herokuapp.com/thinkingAnalyzer/searchFunctionCard/?searchStrings=' + searchStrings;
 
 	fetch(url)
 	.then(res => res.json())
 		.then(data => {
-			console.log(data);
-			setFilteredList(data)
+				setFilteredFunctionMain(data.thinkingFunction.reverse());
+				setFilteredFunctionDetail(data.thinkingFunctionDetail);
 		})
 	.catch(e => console.error(e))
 }
@@ -70,7 +70,7 @@ function FunctionDetailCard({ mainTitle, functionDetail }) {
 						() => cardTitleHandler(showDetailCard, setShowDetailCard)
 					}
 				>
-					&or; Hidden Detail
+					&gt; Hidden Detail
 				</button>
 
 				{details}
@@ -108,26 +108,28 @@ function FunctionDetailCard({ mainTitle, functionDetail }) {
 }
 
 export default function FunctionCard() {
-	const [list, setList] = useState({});
-	const [filteredList, setFilteredList] = useState(null);
+	const [functionMain, setFunctionMain] = useState([]);
+	const [functionDetail, setFunctionDetail] = useState([]);
+	const [filteredFunctionMain, setFilteredFunctionMain] = useState(null);
+	const [filteredFunctionDetail, setFilteredFunctionDetail] = useState(null);
 
 	const [searchStrings, setSearchStrings] = useState('');
 
 	useEffect(() => {
 		fetch('https://yoake.herokuapp.com/thinkingAnalyzer/')
 			.then(res => res.json())
-			.then(data => setList(data))
+			.then(data => {
+				setFunctionMain(data.thinkingFunction.reverse());
+				setFunctionDetail(data.thinkingFunctionDetail);
+			})
+			.catch(e => console.error(e))
 	}, []);
 
-	if (!filteredList) {
+	if (!filteredFunctionMain || !filteredFunctionDetail) {
 
-		if (list.thinkingFunction && list.thinkingFunctionDetail) {
-			const functionMain = list.thinkingFunction;
-			const functionDetail = list.thinkingFunctionDetail;
+		if (functionMain && functionDetail) {
 
-			const reverseMain = functionMain.reverse();
-
-			const	cards = reverseMain.map((fMain) => {
+			const	cards = functionMain.map((fMain) => {
 				return (
 					<div 
 						className={` 
@@ -159,8 +161,9 @@ export default function FunctionCard() {
 						<Searcher 
 							searchStrings={searchStrings} 
 							setSearchStrings={setSearchStrings} 
+							setFilteredFunctionMain={setFilteredFunctionMain}
+							setFilteredFunctionDetail={setFilteredFunctionDetail}
 							searchClickHandler={searchClickHandler}
-							setFilteredList={setFilteredList}
 						/>
 					</div>
 					{cards}
@@ -172,13 +175,9 @@ export default function FunctionCard() {
 
 	} else {
 
-		const functionMain = filteredList.thinkingFunction;
-		const functionDetail = filteredList.thinkingFunctionDetail;
+		if (filteredFunctionMain && filteredFunctionDetail) {
 
-		if (functionMain && functionDetail) {
-			const reverseMain = functionMain.reverse();
-
-			const	cards = reverseMain.map((fMain) => {
+			const	cards = filteredFunctionMain.map((fMain) => {
 				return (
 					<div 
 						className={` 
@@ -210,8 +209,9 @@ export default function FunctionCard() {
 						<Searcher 
 							searchStrings={searchStrings} 
 							setSearchStrings={setSearchStrings} 
+							setFilteredFunctionMain={setFilteredFunctionMain}
+							setFilteredFunctionDetail={setFilteredFunctionDetail}
 							searchClickHandler={searchClickHandler}
-							setFilteredList={setFilteredList}
 						/>
 					</div>
 					{cards}

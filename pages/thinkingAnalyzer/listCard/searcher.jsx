@@ -5,8 +5,9 @@ import utilStyles from '../../../styles/utils.module.css';
 export default function Searcher({
 	searchStrings, 
 	setSearchStrings, 
+	setFilteredFunctionMain,
+	setFilteredFunctionDetail,
 	searchClickHandler,
-	setFilteredList
 }) {
 	return (
 		<>
@@ -20,7 +21,7 @@ export default function Searcher({
 			/>
 			<button 
 				className={styles.stringSearchButton}
-				onClick={() => searchClickHandler(searchStrings, setFilteredList)}
+				onClick={() => searchClickHandler(searchStrings, setFilteredFunctionMain, setFilteredFunctionDetail)}
 			>
 				Search
 			</button>
