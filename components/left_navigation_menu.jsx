@@ -19,6 +19,7 @@ const LeftNavigationMenu = forwardRef(({leftNavRef, leftNavHiddenHandler}, ref) 
 				<Link href="/">YOAKE</Link>
 				<Link href="/blog/blog">Blog</Link>
 				<Link href="/thinkingAnalyzer/thinkingAnalyzer">Thinking Analyzer</Link>
+				<Link href="/challengeList/challengeList">Challenge List</Link>
 				<Link href="/about/aboutMe">About Me</Link>
 				<Link href="https://twitter.com/SasakiYudai0">Twitter</Link>
 				<Link href="https://github.com/sanflog/">Github</Link>
