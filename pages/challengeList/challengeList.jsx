@@ -1,6 +1,23 @@
 import Layout from '../../components/layout';
 
 function SignInPage() {
+	return (
+		<div>
+
+			<h3>sign in</h3>
+
+			<form action="https://yoake.herokuapp.com/challengeList/signin/" method="post">
+				<label>username:</label>
+				<input type="text" name="username" />
+
+				<label>password:</label>
+				<input type="text" name="password" />
+
+				<input type="submit" value="sign in" />
+
+			</form>
+		</div>
+	);
 }
 
 function SignUpPage() {
@@ -13,7 +30,8 @@ export default function ChallengesList() {
 	return(
 		<Layout>
 			<h1>Challenges List</h1>
-			<a>&gt;&gt; sign in here</a>
+
+			<SignInPage />
 
 			<p>
 				Here is put Challenge List. You can create challenge list your own, 
