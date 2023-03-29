@@ -1,95 +1,88 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { cookies } from 'next/headers';
+
 import CreateChallengeList from './createChallengeList';
+import AddChallengeItem from './addChallengeItem';
 
-const info = {
-	'username' : 'sanset',
-	'list' : [
-		{ 
-			'listname' : 'test',
-			'challenge' : [
-				[true, 'eat Sushi'],
-				[false, 'testets'],
-			]
-		},
-		{ 
-			'listname' : 'test2',
-			'challenge' : [
-				[false, 'watch Youtube'],
-				[false, 'aaaaa'],
-			]
-		}
-	]
-};
+import styles from './userPage.module.css';
+import utilStyles from '../../styles/utils.module.css';
 
 
+function signout(setSignedIn) {
+	document.cookie = 'username= ;';
+	setSignedIn('');
+}
 
-export default function UserPage() {
+
+export default function UserPage({ username, setSignedIn }) {
 	const [showCreateList, setShowCreateList] = useState(false);
+	const [challengeLists, setChallengeLists] = useState([]);
+	const [challengeItems, setChallengeItems] = useState([]);
+
+	useEffect(() => {
+		fetch('http://localhost:8000/challengeList/userpage/?username=' + username)
+			.then(response => response.json())
+			.then(data => {
+				setChallengeLists(data.challengeLists);
+				setChallengeItems(data.challengeItems);
+			})
+			.catch(e => console.error(e))
+	}, []);
 
 	function createListHandler() {
 		setShowCreateList(!showCreateList);
 	}
 
-	const challengeLists = info.list.map((lst) => {
-		const challengeList = lst.challenge.map((item, i) => {
-			return (
-				<tr key={i}>
-					<td>{item[0] && "X"}</td>
-					<td>{item[1]}</td>
-				</tr>
-			);
+	const lists = challengeLists.map((list) => {
+		const items = challengeItems.map((item) => {
+			if (list.listName == item.listName_id) {
+				return (
+					<>
+						<li key={item.challenge}>
+							{item.challenge} {item.isAchieve && <strong>done</strong>}
+						</li>
+						<button>del</button>
+					</>
+				);
+			}
 		});
 		return (
-			<div key={lst.listname}>
-				<h4>{lst.listname}</h4>
-				<table border="1px solid black">
-					<tbody>
-						{challengeList}
-					</tbody>
-				</table>
+			<div key={list.listName} className={styles.challengeList}>
+				<p>{list.listName}</p>
+				<button>del</button>
+
+				<ul>
+					{items}
+				</ul>
+				<AddChallengeItem />
+
+				<hr />
+
 			</div>
 		);
 	});
 
-	if (showCreateList) {
-		return (
+	return (
+		<div>
+
 			<div>
-				<h3>{info.username}</h3>
-
-				<div>
-					<a href="http://localhost:3000/challengeList/challengeList">sign out</a>
-				</div>
-
-				<CreateChallengeList />
-
-				<div>
-					<button onClick={() => createListHandler()}>
-						Cancel 
-					</button>
-				</div>
-
-				{challengeLists}
-
+				<p>{username}</p>
 			</div>
-		);
-	} else {
-		return (
+
+			<div onClick={() => signout(setSignedIn)}>
+				<p>sign out</p>
+			</div>
+
+			<hr />
+
+			<CreateChallengeList />
+
+			<hr />
+
 			<div>
-				<h3>{info.username}</h3>
-
-				<div>
-					<a href="http://localhost:3000/challengeList/challengeList">sign out</a>
-				</div>
-
-				<div>
-					<button onClick={() => createListHandler()}>
-						+ create a challenge list
-					</button>
-				</div>
-
-				{challengeLists}
-
+				{lists}
 			</div>
-		);
-	}
+
+		</div>
+	);
 }

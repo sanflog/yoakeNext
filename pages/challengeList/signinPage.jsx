@@ -17,13 +17,15 @@ function sendUserInfo(
 		body: reqBody,
 	})
 		.then(response => response.json())
-		.then(data => setSignedIn(data))
+		.then(data => {
+			document.cookie = 'username=' + username + ';max-age=3600; samesite=Lax';
+			setSignedIn(data);
+		})
 		.catch(e => console.error(e))
 
 }
 
-function SigninForm({setSignedIn}) {
-	const [username, setUsername] = useState('');
+function SigninForm({setSignedIn, username, setUsername}) {
 	const [password, setPassword] = useState('');
 
 	return (
@@ -65,13 +67,15 @@ function SigninForm({setSignedIn}) {
 	);
 }
 
-export default function SigninPage({setSignedIn}) {
+export default function SigninPage({ setSignedIn, username, setUsername }) {
 	return (
 		<div>
 			<h1>Challenges List</h1>
 
 			<SigninForm 
 				setSignedIn={setSignedIn}
+				username={username}
+				setUsername={setUsername}
 			/>
 
 			<p>

@@ -11,6 +11,7 @@ export default function FooterMenu() {
 					<ul>
 						<li><Link href="/blog/blog">Blog</Link></li>
 						<li><Link href="/thinkingAnalyzer/thinkingAnalyzer">Thinking Analizer</Link></li>
+						<li><Link href="/challengeList/challengeList">Challenge List</Link></li>
 						<li><Link href="/about/aboutMe">About</Link></li>
 					</ul>
 				</div>
