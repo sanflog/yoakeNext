@@ -15,7 +15,7 @@ function signout(setSignedIn) {
 
 function deleteItem(id, setResMsg) {
 	const data = { 'id' : id };
-	fetch('http://localhost:8000/challengeList/deleteItem/', {
+	fetch('http://yoake.herokuapp.com/challengeList/deleteItem/', {
 		method: 'POST',
 		headers: {
 			'Content-Type' : 'application/x-www-form-urlencoded'
@@ -29,7 +29,7 @@ function deleteItem(id, setResMsg) {
 
 function deleteList(id, setResMsg) {
 	const data = { 'id' : id };
-	fetch('http://localhost:8000/challengeList/deleteList/', {
+	fetch('http://yoake.herokuapp.com/challengeList/deleteList/', {
 		method: 'POST',
 		headers: {
 			'Content-Type' : 'application/x-www-form-urlencoded'
@@ -66,7 +66,7 @@ export default function UserPage({
 	const [resMsg, setResMsg] = useState('');
 
 	useEffect(() => {
-		fetch('http://localhost:8000/challengeList/userpage/?username=' + username)
+		fetch('http://yoake.herokuapp.com/challengeList/userpage/?username=' + username)
 			.then(response => response.json())
 			.then(data => {
 				setChallengeLists(data.challengeLists);

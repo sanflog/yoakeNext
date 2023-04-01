@@ -3,7 +3,7 @@ import utilStyles from '../../styles/utils.module.css';
 
 export default function AddChallengeItem({id}) {
 	return (
-		<form action="http://localhost:8000/challengeList/addItem/" method="post">
+		<form action="http://yoake.herokuapp.com/challengeList/addItem/" method="post">
 			<legend>Item post form </legend>
 			<label>Item Name: </label>
 			<input className={styles.createListInput} type="text" name="itemname" />

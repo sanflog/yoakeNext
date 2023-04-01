@@ -3,7 +3,7 @@ import utilStyles from '../../styles/utils.module.css';
 
 export default function CreateChallengeList({username}) {
 	return (
-		<form action="http://localhost:8000/challengeList/createList/" method="post">
+		<form action="http://yoake.herokuapp.com/challengeList/createList/" method="post">
 
 			<legend>List post form </legend>
 

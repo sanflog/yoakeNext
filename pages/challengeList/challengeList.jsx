@@ -28,7 +28,7 @@ export default function ChallengesList() {
 			}
 		}
 
-		fetch('http://localhost:8000/challengeList/allList/')
+		fetch('http://yoake.herokuapp.com/challengeList/allList/')
 			.then(response => response.json())
 			.then(data => {
 				setAllLst(data.lst)
