@@ -74,33 +74,37 @@ export default function SigninPage({
 	allItemLst
 }) {
 
-	const alllists = allLst.map((list) => {
-		const items = allItemLst.map((item) => {
-			if (list.id == item.listName_id) {
-				return (
-					<>
-						<li key={'item' + item.id}>
-							{item.challenge}
-						</li>
-					</>
-				);
-			}
+	let alllists = [];
+
+	if (!allLst == [] && !allItemLst == []) {
+		alllists = allLst.map((list) => {
+			const items = allItemLst.map((item) => {
+				if (list.id == item.listName_id) {
+					return (
+						<>
+							<li key={'item' + item.id}>
+								{item.challenge}
+							</li>
+						</>
+					);
+				}
+			});
+
+			return (
+				<div key={'list' + list.listName}>
+					<p>{list.listName}</p>
+					<p>{list.description}</p>
+
+					<ul>
+						{items}
+					</ul>
+
+					<hr />
+
+				</div>
+			);
 		});
-
-		return (
-			<div key={'list' + list.listName}>
-				<p>{list.listName}</p>
-				<p>{list.description}</p>
-
-				<ul>
-					{items}
-				</ul>
-
-				<hr />
-
-			</div>
-		);
-	});
+	}
 
 	return (
 		<div>
@@ -122,7 +126,6 @@ export default function SigninPage({
 
 			<h1>other's challenge list</h1>
 			<div>
-				{alllists}
 			</div>
 
 		</div>
