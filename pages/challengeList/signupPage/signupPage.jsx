@@ -8,7 +8,7 @@ import utilStyles from '../../../styles/utils.module.css';
 
 function submit(username, password, email, setIsSuccess) {
 
-	fetch('http://localhost:8000/challengeList/signup/', {
+	fetch('http://yoake.herokuapp.com/challengeList/signup/', {
 		method: 'POST',
 		headers: {
 			'Content-Type' : 'application/x-www-form-urlencoded',
