@@ -22,7 +22,6 @@ function sendUserInfo(
 			setSignedIn(data);
 		})
 		.catch(e => console.error(e))
-
 }
 
 function SigninForm({setSignedIn, username, setUsername}) {
@@ -67,7 +66,42 @@ function SigninForm({setSignedIn, username, setUsername}) {
 	);
 }
 
-export default function SigninPage({ setSignedIn, username, setUsername }) {
+export default function SigninPage({
+	setSignedIn, 
+	username, 
+	setUsername, 
+	allLst,
+	allItemLst
+}) {
+
+	const alllists = allLst.map((list) => {
+		const items = allItemLst.map((item) => {
+			if (list.id == item.listName_id) {
+				return (
+					<>
+						<li key={'item' + item.id}>
+							{item.challenge}
+						</li>
+					</>
+				);
+			}
+		});
+
+		return (
+			<div key={'list' + list.listName}>
+				<p>{list.listName}</p>
+				<p>{list.description}</p>
+
+				<ul>
+					{items}
+				</ul>
+
+				<hr />
+
+			</div>
+		);
+	});
+
 	return (
 		<div>
 			<h1>Challenges List</h1>
@@ -85,6 +119,11 @@ export default function SigninPage({ setSignedIn, username, setUsername }) {
 			<p>
 				If you did not sign up yet, you should enter <Link href="./signupPage/signupPage">sign up</Link> page.
 			</p>
+
+			<h1>other's challenge list</h1>
+			<div>
+				{alllists}
+			</div>
 
 		</div>
 	);

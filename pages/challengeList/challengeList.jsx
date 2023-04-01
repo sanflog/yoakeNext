@@ -5,6 +5,8 @@ import SigninPage from './signinPage';
 import UserPage from './userPage';
 
 export default function ChallengesList() {
+	const [allLst, setAllLst] = useState([]);
+	const [allItemLst, setAllItemLst] = useState([]);
 	const [signedIn, setSignedIn] = useState('');
 	const [username, setUsername] = useState('');
 
@@ -25,6 +27,14 @@ export default function ChallengesList() {
 				}
 			}
 		}
+
+		fetch('http://localhost:8000/challengeList/allList/')
+			.then(response => response.json())
+			.then(data => {
+				setAllLst(data.lst)
+				setAllItemLst(data.ilst)
+			})
+			.catch(e => console.error(e))
 	}, []);
 
 	if (signedIn === '') {
@@ -34,6 +44,8 @@ export default function ChallengesList() {
 					setSignedIn={setSignedIn}
 					username={username}
 					setUsername={setUsername}
+					allLst={allLst}
+					allItemLst={allItemLst}
 				/>
 			</Layout>
 		);
@@ -43,9 +55,12 @@ export default function ChallengesList() {
 				<UserPage 
 					username={username} 
 					setSignedIn={setSignedIn} 
+					allLst={allLst}
+					allItemLst={allItemLst}
 				/>
+					{console.log(allLst)}
+					{console.log(allItemLst)}
 			</Layout>
 		);
 	}
-
 }
