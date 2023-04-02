@@ -55,9 +55,14 @@ export default function ChallengesList() {
 						allItemLst={allItemLst}
 					/>
 				</Layout>
-			);
-		} else {
-			return(
+			</>
+		);
+	} else {
+		return(
+			<>
+				<Head>
+					<title>Challenge List</title>
+				</Head>
 				<Layout>
 					<UserPage 
 						username={username} 
@@ -65,8 +70,6 @@ export default function ChallengesList() {
 						allLst={allLst}
 						allItemLst={allItemLst}
 					/>
-						{console.log(allLst)}
-						{console.log(allItemLst)}
 				</Layout>
 			</>
 		);
