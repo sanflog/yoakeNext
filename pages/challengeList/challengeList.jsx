@@ -1,3 +1,5 @@
+import Head from 'next/head';
+
 import { useState, useEffect } from 'react';
 
 import Layout from '../../components/layout';
@@ -39,28 +41,34 @@ export default function ChallengesList() {
 
 	if (signedIn === '') {
 		return(
-			<Layout>
-				<SigninPage 
-					setSignedIn={setSignedIn}
-					username={username}
-					setUsername={setUsername}
-					allLst={allLst}
-					allItemLst={allItemLst}
-				/>
-			</Layout>
-		);
-	} else {
-		return(
-			<Layout>
-				<UserPage 
-					username={username} 
-					setSignedIn={setSignedIn} 
-					allLst={allLst}
-					allItemLst={allItemLst}
-				/>
-					{console.log(allLst)}
-					{console.log(allItemLst)}
-			</Layout>
+			<>
+				<Head>
+					<title>Challenge List</title>
+				</Head>
+
+				<Layout>
+					<SigninPage 
+						setSignedIn={setSignedIn}
+						username={username}
+						setUsername={setUsername}
+						allLst={allLst}
+						allItemLst={allItemLst}
+					/>
+				</Layout>
+			);
+		} else {
+			return(
+				<Layout>
+					<UserPage 
+						username={username} 
+						setSignedIn={setSignedIn} 
+						allLst={allLst}
+						allItemLst={allItemLst}
+					/>
+						{console.log(allLst)}
+						{console.log(allItemLst)}
+				</Layout>
+			</>
 		);
 	}
 }

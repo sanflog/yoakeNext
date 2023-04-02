@@ -1,5 +1,7 @@
-import { useState } from 'react';
 import Link from 'next/link';
+import Head from 'next/head';
+
+import { useState } from 'react';
 
 import Layout from '../../../components/layout';
 import styles from './signupPage.module.css';
@@ -48,12 +50,18 @@ export default function SignupPage() {
 	if (isSuccess.response == 'OK') {
 		return (
 			<Layout>
+				<Head>
+					<title>sign up</title>
+				</Head>
 				<SignupSuccess />
 			</Layout>
 		);
 	} else {
 		return (
 			<Layout>
+				<Head>
+					<title>sign up</title>
+				</Head>
 
 				<fieldset>
 
