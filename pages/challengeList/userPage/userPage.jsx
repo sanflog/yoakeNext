@@ -1,11 +1,11 @@
 import { useState, useEffect } from 'react';
 import { cookies } from 'next/headers';
 
-import CreateChallengeList from './createChallengeList';
-import AddChallengeItem from './addChallengeItem';
+import CreateChallengeList from './createChallengeList/createChallengeList';
+import AddChallengeItem from './addChallengeItem/addChallengeItem';
 
 import styles from './userPage.module.css';
-import utilStyles from '../../styles/utils.module.css';
+import utilStyles from '../../../styles/utils.module.css';
 
 
 function signout(setSignedIn) {

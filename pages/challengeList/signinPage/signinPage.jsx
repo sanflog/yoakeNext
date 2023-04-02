@@ -2,6 +2,9 @@ import { useState } from 'react';
 
 import Link from 'next/link';
 
+import styles from './signinPage.module.css';
+
+
 function sendUserInfo(
 	setSignedIn, 
 	username, 
@@ -29,7 +32,11 @@ function SigninForm({setSignedIn, username, setUsername}) {
 	const [password, setPassword] = useState('');
 
 	return (
-		<div>
+		<div
+			className={`
+				${styles.signinForm}
+			`}
+		>
 
 			<h3>sign in</h3>
 
@@ -67,14 +74,8 @@ function SigninForm({setSignedIn, username, setUsername}) {
 	);
 }
 
-export default function SigninPage({
-	setSignedIn, 
-	username, 
-	setUsername, 
-	allLst,
-	allItemLst
-}) {
 
+function AllLists({allLst, allItemLst}) {
 	let alllists = [];
 
 	if (!allLst == [] && !allItemLst == []) {
@@ -108,6 +109,24 @@ export default function SigninPage({
 	}
 
 	return (
+		<>
+			{alllists}
+		</>
+	);
+}
+
+
+export default function SigninPage({
+	setSignedIn, 
+	username, 
+	setUsername, 
+	allLst,
+	allItemLst
+}) {
+
+	const [isShowSignin, setIsShowSignin] = useState(false);
+
+	return (
 		<div>
 			<h1>Challenges List</h1>
 
@@ -127,7 +146,7 @@ export default function SigninPage({
 
 			<h1>other's challenge list</h1>
 			<div>
-				{alllists}
+				<AllLists allLst={allLst} allItemLst={allItemLst} />
 			</div>
 
 		</div>

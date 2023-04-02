@@ -1,5 +1,5 @@
 import styles from './addChallengeItem.module.css';
-import utilStyles from '../../styles/utils.module.css';
+import utilStyles from '../../../../styles/utils.module.css';
 
 export default function AddChallengeItem({id}) {
 	return (

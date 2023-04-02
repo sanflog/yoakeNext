@@ -2,9 +2,9 @@ import Head from 'next/head';
 
 import { useState, useEffect } from 'react';
 
-import Layout from '../../components/layout';
-import SigninPage from './signinPage';
-import UserPage from './userPage';
+import Clayout from './components/cLayout';
+import SigninPage from './signinPage/signinPage';
+import UserPage from './userPage/userPage';
 
 export default function ChallengesList() {
 	const [allLst, setAllLst] = useState([]);
@@ -43,37 +43,33 @@ export default function ChallengesList() {
 
 	if (signedIn === '') {
 		return(
-			<>
+			<Clayout>
 				<Head>
 					<title>Challenge List</title>
 				</Head>
 
-				<Layout>
-					<SigninPage 
-						setSignedIn={setSignedIn}
-						username={username}
-						setUsername={setUsername}
-						allLst={allLst}
-						allItemLst={allItemLst}
-					/>
-				</Layout>
-			</>
+				<SigninPage 
+					setSignedIn={setSignedIn}
+					username={username}
+					setUsername={setUsername}
+					allLst={allLst}
+					allItemLst={allItemLst}
+				/>
+			</Clayout>
 		);
 	} else {
 		return(
-			<>
+			<Clayout>
 				<Head>
 					<title>Challenge List</title>
 				</Head>
-				<Layout>
-					<UserPage 
-						username={username} 
-						setSignedIn={setSignedIn} 
-						allLst={allLst}
-						allItemLst={allItemLst}
-					/>
-				</Layout>
-			</>
+				<UserPage 
+					username={username} 
+					setSignedIn={setSignedIn} 
+					allLst={allLst}
+					allItemLst={allItemLst}
+				/>
+			</Clayout>
 		);
 	}
 }
