@@ -24,8 +24,10 @@ export default function ChallengesList() {
 					c = c.substring(1);
 				}
 				if (c.indexOf(name) == 0) {
-					setUsername(c.substring(name.length, c.length));
-					setSignedIn('OK');
+					if (c.substring(name.length, c.length) !== '') {
+						setUsername(c.substring(name.length, c.length));
+						setSignedIn('OK');
+					}
 				}
 			}
 		}

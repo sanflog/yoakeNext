@@ -7,6 +7,7 @@ function sendUserInfo(
 	username, 
 	password
 ) {
+
 	const reqBody = 'username=' + username + '&password=' + password;
 
 	fetch('https://yoake.herokuapp.com/challengeList/signin/', {
@@ -126,6 +127,7 @@ export default function SigninPage({
 
 			<h1>other's challenge list</h1>
 			<div>
+				{alllists}
 			</div>
 
 		</div>
