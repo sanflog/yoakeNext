@@ -9,7 +9,7 @@ function sendUserInfo(
 ) {
 	const reqBody = 'username=' + username + '&password=' + password;
 
-	fetch('http://yoake.herokuapp.com/challengeList/signin/', {
+	fetch('https://yoake.herokuapp.com/challengeList/signin/', {
 		method: 'POST',
 		headers: {
 			'Content-Type' : 'application/x-www-form-urlencoded',
