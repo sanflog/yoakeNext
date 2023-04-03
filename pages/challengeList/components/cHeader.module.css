@@ -1,9 +1,13 @@
 .header {
+	position: fixed;
+	left: 0;
+	top: 0;
 	width: 100%;
 	margin: 0;
 	padding: 0;
 	background-color: black;
 	color: white;
+	z-index: 100;
 }
 
 .header ul {
@@ -15,4 +19,11 @@
 .header li {
 	display: inline-block;
 	padding: 5px 0 5px 10px;
+	cursor: pointer;
+}
+
+.header a {
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
 }

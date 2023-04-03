@@ -1,29 +1,15 @@
 import { useState } from 'react';
 import Head from 'next/head';
 
-import Cheader from './cHeader';
-import SideMenu from './sideMenu';
 import FooterMenu from '../../../components/footer_menu';
 
+import styles from './cLayout.module.css';
 import utilStyles from '../../../styles/utils.module.css';
 
 export const siteTitle = "Yoake";
 
 
 export default function Clayout({children}) {
-	const [showSidemenu, setShowSidemenu] = useState(false);
-
-	const Sidemenu = () => {
-		if (showSidemenu) {
-			return (
-				<SideMenu />
-			);
-		} else {
-			return (
-				null
-			);
-		}
-	}
 
 	return (
 		<>
@@ -32,18 +18,11 @@ export default function Clayout({children}) {
 				<meta	property="og:image"	content="yoake"	/>
 			</Head>
 
-			<Cheader 
-				showSidemenu={showSidemenu}
-				setShowSidemenu={setShowSidemenu}
-			/>
-			{Sidemenu()}
-
-			<div className={` ${utilStyles.fadeIn} `}>
+			<div className={` ${styles.cContents} ${utilStyles.fadeIn} `}>
 				<main>{children}</main>
 			</div>
 
 			<FooterMenu />
-
 		</>
 	);
 }

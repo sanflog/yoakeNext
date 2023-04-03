@@ -1,7 +1,5 @@
 import { useState } from 'react';
 
-import Link from 'next/link';
-
 import styles from './signinPage.module.css';
 
 
@@ -34,13 +32,12 @@ function SigninForm({setSignedIn, username, setUsername}) {
 	return (
 		<div
 			className={`
-				${styles.signinForm}
+				${styles.wrapper}
 			`}
 		>
 
-			<h3>sign in</h3>
-
-			<div>
+			<div className={styles.signinForm}>
+				<h3>sign in</h3>
 
 				<p>
 					username: 
@@ -75,80 +72,26 @@ function SigninForm({setSignedIn, username, setUsername}) {
 }
 
 
-function AllLists({allLst, allItemLst}) {
-	let alllists = [];
-
-	if (!allLst == [] && !allItemLst == []) {
-		alllists = allLst.map((list) => {
-			const items = allItemLst.map((item) => {
-				if (list.id == item.listName_id) {
-					return (
-						<>
-							<li key={'item' + item.id}>
-								{item.challenge}
-							</li>
-						</>
-					);
-				}
-			});
-
-			return (
-				<div key={'list' + list.listName}>
-					<p>{list.listName}</p>
-					<p>{list.description}</p>
-
-					<ul>
-						{items}
-					</ul>
-
-					<hr />
-
-				</div>
-			);
-		});
-	}
-
-	return (
-		<>
-			{alllists}
-		</>
-	);
-}
-
-
 export default function SigninPage({
 	setSignedIn, 
 	username, 
 	setUsername, 
-	allLst,
-	allItemLst
+	showSignin
 }) {
-
-	const [isShowSignin, setIsShowSignin] = useState(false);
-
-	return (
-		<div>
-			<h1>Challenges List</h1>
-
-			<SigninForm 
-				setSignedIn={setSignedIn}
-				username={username}
-				setUsername={setUsername}
-			/>
-
-			<p>
-				Here is put Challenge List. You can create challenge list your own, 
-				and then you can check whether challenges is achieved by you.
-			</p>
-			<p>
-				If you did not sign up yet, you should enter <Link href="./signupPage/signupPage">sign up</Link> page.
-			</p>
-
-			<h1>other's challenge list</h1>
+	if (!showSignin) {
+		return null;
+	} else {
+		return (
 			<div>
-				<AllLists allLst={allLst} allItemLst={allItemLst} />
-			</div>
 
-		</div>
-	);
+				<SigninForm 
+					setSignedIn={setSignedIn}
+					username={username}
+					setUsername={setUsername}
+				/>
+
+			</div>
+		);
+	}
+
 }
