@@ -38,7 +38,7 @@ export default function ChallengesList() {
 
 	const [allLst, setAllLst] = useState([]);
 	const [allItemLst, setAllItemLst] = useState([]);
-	const [showSignin, setShowSignin] = useState(false);
+	const [showSignin, setShowSignin] = useState(true);
 	const [signedIn, setSignedIn] = useState('');
 	const [username, setUsername] = useState('');
 	const [showSidemenu, setShowSidemenu] = useState(false);
@@ -135,8 +135,6 @@ export default function ChallengesList() {
 				<UserPage 
 					username={username} 
 					setSignedIn={setSignedIn} 
-					allLst={allLst}
-					allItemLst={allItemLst}
 				/>
 
 				<h3>All challenge items</h3>

@@ -57,8 +57,6 @@ function ResponseMessage({resMsg}) {
 export default function UserPage({ 
 	username, 
 	setSignedIn,
-	allLst,
-	allItemLst
 }) {
 	const [showCreateList, setShowCreateList] = useState(false);
 	const [challengeLists, setChallengeLists] = useState([]);
@@ -85,12 +83,15 @@ export default function UserPage({
 			if (list.id == item.listName_id) {
 				return (
 					<>
-						<li key={'item' + item.id}>
-							{item.challenge} {item.isAchieve && <strong>done</strong>}
+						<li className={styles.item} key={'item' + item.id}>
+							<input className={styles.checkitem} type="checkbox" /> {item.challenge} 
+							<button 
+								className={styles.itemDeleteBtn}
+								onClick={() => deleteItem(item.id, setResMsg)}
+							>
+								X
+							</button>
 						</li>
-						<button onClick={() => deleteItem(item.id, setResMsg)}>
-							del
-						</button>
 					</>
 				);
 			}
@@ -98,83 +99,47 @@ export default function UserPage({
 
 		return (
 			<div key={'list' + list.listName} className={styles.challengeList}>
-				<p>{list.listName}</p>
-				<p>{list.description}</p>
-				<button onClick={() => deleteList(list.id, setResMsg)}>
-					del
+				<span className={styles.listName}>{list.listName}</span>
+				<button 
+					className={styles.listDeleteBtn} 
+					onClick={() => deleteList(list.id, setResMsg)}
+				>
+					Del
 				</button>
+				<p className={styles.listDescription}>{list.description}</p>
 
-				<ul>
-					{items}
-				</ul>
+				<div className={styles.items}>
+					<ul>
+						{items}
+					</ul>
+				</div>
 				<AddChallengeItem id={list.id} />
-
-				<hr />
 
 			</div>
 		);
 	});
-
-	let alllists = [];
-
-	if (!allLst == [] && !allItemLst == []) {
-		 alllists = allLst.map((list) => {
-			const items = allItemLst.map((item) => {
-				if (list.id == item.listName_id) {
-					return (
-						<>
-							<li key={'item' + item.id}>
-								{item.challenge}
-							</li>
-						</>
-					);
-				}
-			});
-
-			return (
-				<div key={'list' + list.listName}>
-					<p>{list.listName}</p>
-					<p>{list.description}</p>
-
-					<ul>
-						{items}
-					</ul>
-
-					<hr />
-
-				</div>
-			);
-		});
-	}
 
 	return (
 		<div>
 
 			<ResponseMessage resMsg={resMsg} />
 
-			<div>
-				<p>{username}</p>
+			<div className={styles.username}>{username}</div>
+			<div className={styles.userpageHeader}>
+				<ul>
+					<li onClick={() => setShowCreateList(!showCreateList)}>Add List</li>
+					<li onClick={() => signout(setSignedIn)}>sign out</li>
+				</ul>
 			</div>
 
-			<div onClick={() => signout(setSignedIn)}>
-				<p>sign out</p>
-			</div>
-
-			<hr />
-
-			<CreateChallengeList username={username} />
-
-			<hr />
+			<CreateChallengeList 
+				username={username} 
+				showCreateList={showCreateList} 
+				setShowCreateList={setShowCreateList} 
+			/>
 
 			<div>
 				{lists}
-			</div>
-
-			<hr />
-
-			<h1>other's challenge list</h1>
-			<div>
-				{alllists}
 			</div>
 
 		</div>

@@ -1,3 +1,44 @@
-.createListInput {
-	padding: 3px;
+.wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0.9;
+}
+
+.addListForm {
+	color: white;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -60%);
+}
+
+.addListForm textarea{
+	width: 500px;
+	height: 300px;
+	padding: 5px;
+}
+
+.titleInput {
+	width: 500px;
+	padding: 5px;
+}
+
+.submitButton {
+	margin: 10px;
+	padding: 10px;
+	background-color: white;
+	border: none;
+	border-radius: 10px;
+}
+
+.cancelButton {
+	margin: 10px;
+	padding: 10px;
+	background-color: white;
+	border: none;
+	border-radius: 10px;
 }

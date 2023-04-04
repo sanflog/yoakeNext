@@ -1,3 +1,83 @@
 .resMsg {
 	color: red;
 }
+
+.username {
+	width: 100px;
+	display: inline-block;
+	padding: 10px;
+	background-color: black;
+	color: white;
+	margin: 0;
+}
+
+.userpageHeader{
+	width: 100%;
+	margin: 0 0 30px 0;
+}
+
+.userpageHeader ul {
+	list-style: none;
+	padding: 0;
+	margin-top: 2px;
+}
+
+.userpageHeader li {
+	display: inline-block;
+	padding: 10px;
+	margin-right: 2px;
+	background-color: gray;
+	color: white;
+}
+
+.challengeList {
+	border: 1px solid black;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+.listName {
+	font-weight: bold;
+}
+
+.listDeleteBtn {
+	display: inline-block;
+	float: right;
+	padding: 5px;
+	font-weight: bold;
+	background-color: #eee;
+	border: none;
+}
+
+.listDescription {
+	padding: 10px;
+	border-bottom: 1px solid black
+}
+
+.items {
+	
+}
+
+.items ul{
+	list-style: none;	
+	margin: 0;
+	padding: 0;
+}
+
+.item {
+	border-bottom: 1px solid black;
+	padding: 5px;
+	margin: 5px;
+}
+
+.checkItem {
+}
+
+.itemDeleteBtn {
+	display: inline-block;
+	float: right;
+	padding: 5px;
+	font-weight: bold;
+	background-color: #eee;
+	border: none;
+}

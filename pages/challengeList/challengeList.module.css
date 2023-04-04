@@ -5,11 +5,12 @@
 }
 
 .items li {
+	min-width: 100px;
 	display: inline-block;
 	margin: 10px;
 	padding: 10px;
 	text-align: center;
-	background-color: #555;
+	background-color: #777;
 	color: #eee;
 	border-radius: 999px;
 }
