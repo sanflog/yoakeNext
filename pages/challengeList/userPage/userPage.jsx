@@ -81,10 +81,26 @@ export default function UserPage({
 	const lists = challengeLists.map((list) => {
 		const items = challengeItems.map((item) => {
 			if (list.id == item.listName_id) {
+				const checkbox = () => {
+					if (!item.isAchieve) {
+						return (
+							<input className={styles.checkitem} type="checkbox" />
+						);
+					} else {
+						return (
+							<input 
+								className={styles.checkitem} 
+								type="checkbox" 
+								checked
+							/>
+						);
+					}
+				}
 				return (
 					<>
 						<li className={styles.item} key={'item' + item.id}>
-							<input className={styles.checkitem} type="checkbox" /> {item.challenge} 
+							{checkbox()}
+							<span className={styles.itemtext}>{item.challenge}</span>
 							<button 
 								className={styles.itemDeleteBtn}
 								onClick={() => deleteItem(item.id, setResMsg)}

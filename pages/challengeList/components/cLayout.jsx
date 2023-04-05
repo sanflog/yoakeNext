@@ -21,8 +21,6 @@ export default function Clayout({children}) {
 			<div className={` ${styles.cContents} ${utilStyles.fadeIn} `}>
 				<main>{children}</main>
 			</div>
-
-			<FooterMenu />
 		</>
 	);
 }

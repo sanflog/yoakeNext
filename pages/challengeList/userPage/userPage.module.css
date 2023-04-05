@@ -73,6 +73,10 @@
 .checkItem {
 }
 
+.itemtext {
+	margin-left: 10px;
+}
+
 .itemDeleteBtn {
 	display: inline-block;
 	float: right;

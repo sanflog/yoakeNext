@@ -13,17 +13,17 @@
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -60%);
+	transform: translate(-50%, -50%);
 }
 
 .addListForm textarea{
-	width: 500px;
+	width: 400px;
 	height: 300px;
 	padding: 5px;
 }
 
 .titleInput {
-	width: 500px;
+	width: 400px;
 	padding: 5px;
 }
 
