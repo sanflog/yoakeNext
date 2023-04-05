@@ -3,12 +3,12 @@ import utilStyles from '../../../../styles/utils.module.css';
 
 export default function AddChallengeItem({id}) {
 	return (
-		<form action="https://yoake.herokuapp.com/challengeList/addItem/" method="post">
-			<legend>Item post form </legend>
-			<label>Item Name: </label>
-			<input className={styles.createListInput} type="text" name="itemname" />
-			<input className={utilStyles.hiddenField} type="text" name="id" value={id} readOnly/>
-			<input type="submit" value="add" />
-		</form>
+		<div className={styles.addItem}>
+			<form action="https://yoake.herokuapp.com/challengeList/addItem/" method="post">
+				<input className={styles.addItemSubmit} type="submit" value="+" />
+				<input className={styles.addItemInput} type="text" name="itemname" placeholder="entering new item..." />
+				<input className={utilStyles.hiddenField} type="text" name="id" value={id} readOnly/>
+			</form>
+		</div>
 	);
 }

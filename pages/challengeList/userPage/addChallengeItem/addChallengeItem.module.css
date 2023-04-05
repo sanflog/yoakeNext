@@ -1,0 +1,30 @@
+.addItem {
+}
+
+.addItemInput {
+	display: inline-block;
+	width: 150px;
+	border: none;
+	border-radius: 30px;
+	padding: 5px 20px;
+	background-color: #ffffff;
+	margin: 0 5px;
+}
+
+.addItemInput:focus {
+	display: inline-block;
+	width: 80%;
+	border: 1px solid #555;
+	border-radius: 30px;
+	padding: 5px 20px;
+	background-color: #ffffff;
+	margin: 0 5px;
+	transition: width 0.5s;
+}
+
+.addItemSubmit {
+	border: none;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 30px;
+}

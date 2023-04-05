@@ -113,6 +113,7 @@ export default function UserPage({
 						{items}
 					</ul>
 				</div>
+
 				<AddChallengeItem id={list.id} />
 
 			</div>

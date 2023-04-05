@@ -34,10 +34,10 @@
 	border: 1px solid black;
 	padding: 20px;
 	margin-bottom: 20px;
+	border-radius: 10px;
 }
 
 .listName {
-	font-weight: bold;
 }
 
 .listDeleteBtn {
@@ -67,7 +67,7 @@
 .item {
 	border-bottom: 1px solid black;
 	padding: 5px;
-	margin: 5px;
+	font-weight: bold;
 }
 
 .checkItem {
