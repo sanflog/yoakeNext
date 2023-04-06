@@ -13,8 +13,19 @@ function signout(setSignedIn) {
 	setSignedIn('');
 }
 
+
+function achieveChangeHandler(id, value) {
+	fetch('http://localhost:8000/challengeList/changeAchieve/', {
+		method: 'POST',
+		headers: {
+			'Content-Type' : 'application/x-www-form-urlencoded'
+		},
+		body : 'id=' + id + '&value=' + value
+	})
+		.catch(e => console.error(e))
+}
+
 function deleteItem(id, setResMsg) {
-	const data = { 'id' : id };
 	fetch('https://yoake.herokuapp.com/challengeList/deleteItem/', {
 		method: 'POST',
 		headers: {
@@ -78,39 +89,53 @@ export default function UserPage({
 		setShowCreateList(!showCreateList);
 	}
 
+	function Checkbox({list, item}) {
+		const [value, setValue] = useState(item.isAchieve)
+		if (list.id == item.listName_id) {
+			const checkbox = () => {
+				if (!item.isAchieve) {
+					return (
+						<input 
+							className={styles.checkitem} 
+							type="checkbox" 
+							value={!value}	
+							onChange={(e) => achieveChangeHandler(item.id, !value)}
+						/>
+					);
+				} else {
+					return (
+						<input 
+							className={styles.checkitem} 
+							type="checkbox" 
+							value={!value}	
+							onChange={(e) => achieveChangeHandler(item.id, !value)}
+							checked
+						/>
+					);
+				}
+			}
+			return (
+				<div key={item.id}>
+					<li className={styles.item}>
+						{checkbox()}
+						<span className={styles.itemtext}>{item.challenge}</span>
+						<button 
+							className={styles.itemDeleteBtn}
+							onClick={() => deleteItem(item.id, setResMsg)}
+						>
+							X
+						</button>
+					</li>
+				</div>
+			);
+		}
+	}
+
 	const lists = challengeLists.map((list) => {
 		const items = challengeItems.map((item) => {
-			if (list.id == item.listName_id) {
-				const checkbox = () => {
-					if (!item.isAchieve) {
-						return (
-							<input className={styles.checkitem} type="checkbox" />
-						);
-					} else {
-						return (
-							<input 
-								className={styles.checkitem} 
-								type="checkbox" 
-								checked
-							/>
-						);
-					}
-				}
-				return (
-					<>
-						<li className={styles.item} key={'item' + item.id}>
-							{checkbox()}
-							<span className={styles.itemtext}>{item.challenge}</span>
-							<button 
-								className={styles.itemDeleteBtn}
-								onClick={() => deleteItem(item.id, setResMsg)}
-							>
-								X
-							</button>
-						</li>
-					</>
-				);
-			}
+			return (
+				<Checkbox list={list} item={item} key={item.id} />
+			);
 		});
 
 		return (
