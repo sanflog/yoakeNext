@@ -15,7 +15,7 @@ function signout(setSignedIn) {
 
 
 function achieveChangeHandler(id, value) {
-	fetch('http://yoake.herokuapp.com/challengeList/changeAchieve/', {
+	fetch('https://yoake.herokuapp.com/challengeList/changeAchieve/', {
 		method: 'POST',
 		headers: {
 			'Content-Type' : 'application/x-www-form-urlencoded'
