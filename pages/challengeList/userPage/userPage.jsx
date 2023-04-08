@@ -230,13 +230,14 @@ export default function UserPage({
 
 			<ResponseMessage resMsg={resMsg} />
 
-			<div className={styles.username}>{username}</div>
 			<div className={styles.userpageHeader}>
 				<ul>
-					<li onClick={() => setShowCreateList(!showCreateList)}>Add List</li>
+					<li>{username}</li>
 					<li onClick={() => signout(setSignedIn)}>sign out</li>
+					<li onClick={() => setShowCreateList(!showCreateList)}>Add List</li>
 				</ul>
 			</div>
+
 
 			<CreateChallengeList 
 				username={username} 
