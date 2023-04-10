@@ -1,9 +1,12 @@
 import Head from 'next/head';
 import Link from 'next/link';
 
+import Date from '/components/date';
+
 import Layout from '/components/layout';
 import utilStyles from '/styles/utils.module.css';
-import Date from '/components/date';
+import styles from './documents.module.css';
+
 import { getSortedPostsData } from '/lib/posts';
 
 export async function getStaticProps() {
@@ -15,38 +18,40 @@ export async function getStaticProps() {
 	};
 }
 
-export default function Blog({allPostsData}) {
+export default function Documents({allPostsData}) {
 	return (
 		<Layout>
 			<section>
 				<Head>
-					<title>Blog</title>
+					<title>Documents</title>
 				</Head>
 
-				<div className={`
-					${utilStyles.title}
-				`}>
-					<h1 className={`
-						${utilStyles.headerFont} 
-						${utilStyles.bigHeader} 
-						${utilStyles.gradientColorText} 
-					`}>
-						BLOG
+				<div
+					className={`
+						${styles.title}
+						${utilStyles.headerFont}
+					`}
+				>
+					<h1>
+						Documents
 					</h1>
-					<p className={utilStyles.describeToTitle}>
-						Hello, here is my blog.
-					</p>
 				</div>
-				<div className={utilStyles.flexContainer}>
+
+				<div className={styles.docs}>
 					{allPostsData.map(({ id, date, title }) => (
-						<Link href={`/blog/posts/${id}`}>	
-							<div className={`
-								${utilStyles.card}
-								${utilStyles.subContent}
-							`} 
+						<Link href={`/documents/posts/${id}`}>	
+							<div 
 								key={id}
+								className={styles.card}
 							>
-								<h1 className={utilStyles.headerFont}>{title}</h1>
+								<p 
+									className={`
+										${utilStyles.headerFont}
+										${styles.cardHeader}
+									`}
+								>
+									{title}
+								</p>
 								<small>
 									<Date dateString={date} />
 								</small>

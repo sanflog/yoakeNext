@@ -9,7 +9,7 @@ export default function FooterMenu() {
 				<div className={styles.footerCol}>
 					<h4><Link href="/">YOAKE</Link></h4>
 					<ul>
-						<li><Link href="/blog/blog">Blog</Link></li>
+						<li><Link href="/documents/documents">Documents</Link></li>
 						<li><Link href="/thinkingAnalyzer/thinkingAnalyzer">Thinking Analizer</Link></li>
 						<li><Link href="/challengeList/challengeList">Challenge List</Link></li>
 						<li><Link href="/about/aboutMe">About</Link></li>

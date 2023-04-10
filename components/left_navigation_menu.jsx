@@ -17,7 +17,7 @@ const LeftNavigationMenu = forwardRef(({leftNavRef, leftNavHiddenHandler}, ref) 
 				${utilStyles.fadeIn3s} 
 			`}>
 				<Link href="/">YOAKE</Link>
-				<Link href="/blog/blog">Blog</Link>
+				<Link href="/documents/documents">Documents</Link>
 				<Link href="/thinkingAnalyzer/thinkingAnalyzer">Thinking Analyzer</Link>
 				<Link href="/challengeList/challengeList">Challenge List</Link>
 				<Link href="/about/aboutMe">About Me</Link>
