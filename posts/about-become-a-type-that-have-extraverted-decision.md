@@ -3,15 +3,32 @@ title: About become a type that have extraverted decision.
 date: '2023-04-10'
 ---
 
-I realized the inportance of **basic**.
+## become a type who have extraverted decision.
 
-It happend when learning how to write css **basic**.  
-I recommend the following site.  
+How to become a personal type who has extraverted decision.
 
-- w3schools : <https://www.w3schools.com/>
+### 1. Understand the way of the thought of them who have extraverted decision.
 
-The tutorials of this site are greate!!  
+**De** users naturally think that I should try to change outside things to achieve goals I want to achieve. Because they have De function as primary function and have Di function as inferior function.
 
-I read only the css tutorial. I will read the HTML and Javascript tutorials.
+### 2. Know how to use extraverted decision.
 
-I think it will definitly be a good experience.
+Basic usage of the De is easy. That is to have interests of outside and to decide outside things. While Di user would hate such way to thought, it is good thought for a side.  
+
+Generally, De user try to change others without kind for others, but good De user will think others feeling and emotions and will try to achieve them goals rather than other De users.
+
+### 3. First, try to have desire to change outside things.
+
+That is natural thought for **De** user. They think naturally try to change outside things. They do not think solve something by myself like a **Di** user's thought.
+
+### 4. Second, try to decide outside things.
+
+You would feel so tired when using De. That affect others and lob them energy so that you feel so bad.
+
+### 5. Expand impact range of the decide to more.
+  
+If you become to be able to change small things or less people, you should expand impact range of your decision to outside things rather than before. Strong De users can give big impact to many people.
+
+### The list to get good extraverted decision
+
+writing now...
