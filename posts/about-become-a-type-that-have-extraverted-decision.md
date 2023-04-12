@@ -29,6 +29,12 @@ You would feel so tired when using De. That affect others and lob them energy so
   
 If you become to be able to change small things or less people, you should expand impact range of your decision to outside things rather than before. Strong De users can give big impact to many people.
 
-### The list to get good extraverted decision
 
-writing now...
+Pretend a personal type you want to become. You must imagine ideal you want to be and you find person who have same type to your ideal. And then you should copy behavior of the person. 
+
+1. Understand about De function.
+2. Know difference between De function and others.
+3. Know and do how to use De function and simple pattern of the De function.
+4. Pretend the person you want to be. 
+
+You have to always have that thought, which is so difficult. But if you really want to get De function, you need to get patient for your ideal.
