@@ -9,7 +9,7 @@ How to become a personal type who has extraverted decision.
 
 ### 1. Understand the way of the thought of them who have extraverted decision.
 
-**De** users naturally think that I should try to change outside things to achieve goals I want to achieve. Because they have De function as primary function and have Di function as inferior function.
+**De** users naturally think that they should try to change outside things to achieve goals they want to achieve. Because they have De function as primary function and have Di function as inferior function.
 
 ### 2. Know how to use extraverted decision.
 
@@ -38,3 +38,15 @@ Pretend a personal type you want to become. You must imagine ideal you want to b
 4. Pretend the person you want to be. 
 
 You have to always have that thought, which is so difficult. But if you really want to get De function, you need to get patient for your ideal.
+
+### Practice for extraverted decision.
+
+First, you should discover target to change. Second, you instruct to the target or who is needed to change target. And then, you must do repeat above two things. 
+
+However, person who have De function have Pi (introverted precieve). Pi is separated two function to intuition and sensaition. Ni function see future vision, Si remenber past. 
+
+Tow person who have Ni or Si refer what they feel by them ability, and this make difference them. You can choice wether which use. 
+
+practice with Ni
+
+practice with Si
