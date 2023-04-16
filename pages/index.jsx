@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 
 import Layout, { siteTitle } from '../components/layout';
 import BottomFloatMenu from '../components/bottom_float_menu';
@@ -36,14 +37,16 @@ export default function HomePage({ allPostsData }) {
 						${utilStyles.paddingBottom10px}
 					`}>YOAKE</h1>
 					<p>
-						Hello, I'm San.<br />
-						This site is showing what my thought.
+						You want to adjustment your thought.<br />
+						<Link href="./thinkingAnalyzer/thinkingAnalyzer">&gt;&gt; jump to Thinking Analyzer</Link>
 					</p>
 					<p>
-						Do you think you are right? In this state, are we really good on future?
+						Do you want to clear what you should do?<br />
+						<Link href="./challengeList/challengeList">&gt;&gt; jump to Challenge List</Link>
 					</p>
 					<p>
-						Here may show solution for it.
+						I'm writing document about important in thinking everything.<br />
+						<Link href="./documents/documents">&gt;&gt; read documents</Link>
 					</p>
 				</section>
 			</Layout>

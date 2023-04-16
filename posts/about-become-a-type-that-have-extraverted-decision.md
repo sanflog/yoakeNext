@@ -50,3 +50,38 @@ Tow person who have Ni or Si refer what they feel by them ability, and this make
 practice with Ni
 
 practice with Si
+
+
+
+
+How to become a personality type with extraverted decision-making:
+
+    Understand the thought process of people with extraverted decision-making.
+
+Users with the De function naturally think that they should try to change external factors to achieve their desired goals. This is because the De function is their primary function and they have the Di function as their inferior function.
+
+    Learn how to use extraverted decision-making.
+
+The basic usage of De is simple. It involves taking an interest in external factors and making decisions based on them. While a Di user may dislike this way of thinking, it can be useful for some situations.
+
+Generally, De users may try to change things without considering the feelings of others, but a good De user will take others' emotions into account and try to help them achieve their goals.
+
+    Develop a desire to change external factors.
+
+This comes naturally to De users who tend to focus on external factors. They don't tend to think about solving problems on their own, like Di users.
+
+    Make decisions based on external factors.
+
+Using De can be tiring, and it can drain others' energy. This can lead to feeling bad.
+
+    Expand the impact of your decisions.
+
+If you are able to change smaller things or influence fewer people, try to expand the range of your decisions to external factors. Strong De users can have a big impact on many people.
+
+To become the personality type you want to be, imagine your ideal self and find a person with the same personality type as your ideal. Then, copy their behavior.
+
+Practice extraverted decision-making:
+
+First, identify a target to change. Then, provide guidance to the target or the person who needs to change the target. Repeat these steps.
+
+However, people with the De function also have Pi (introverted perception). Pi is divided into two functions: intuition and sensation. The Ni function sees a future vision, while the Si function remembers the past. Two people with Ni or Si will differ based on what they feel through their abilities, and you can choose which one to use.
