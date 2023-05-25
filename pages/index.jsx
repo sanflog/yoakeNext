@@ -49,7 +49,7 @@ export default function HomePage({ allPostsData }) {
 						<Link href="./documents/documents">&gt;&gt; read documents</Link>
 					</p>
 					<p>
-						Here is <Link href="https://www.notion.so/39e308760e9c47628b88a5fa9d829adf?pvs=4">Notion</Link> Site.
+						Here is <Link href="https://terrific-nerine-a2a.notion.site/39e308760e9c47628b88a5fa9d829adf">Notion</Link> Site.
 					</p>
 				</section>
 			</Layout>
