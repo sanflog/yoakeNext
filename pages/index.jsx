@@ -48,6 +48,9 @@ export default function HomePage({ allPostsData }) {
 						I'm writing document about important in thinking everything.<br />
 						<Link href="./documents/documents">&gt;&gt; read documents</Link>
 					</p>
+					<p>
+						Here is <Link href="https://www.notion.so/39e308760e9c47628b88a5fa9d829adf?pvs=4">Notion</Link> Site.
+					</p>
 				</section>
 			</Layout>
 		</>
