@@ -1,6 +1,9 @@
 import Head from "next/head";
 import Link from "next/link";
 
+import cheerio from "cheerio";
+import axios from "axios";
+
 import Layout from "/components/layout";
 import utilStyles from "/styles/utils.module.css";
 import Date from "/components/date";
