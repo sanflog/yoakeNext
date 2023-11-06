@@ -43,18 +43,7 @@ export default function HomePage({ allPostsData }) {
             YOAKE
           </h1>
           <p>
-            You want to adjustment your thought.
-            <br />
-            <Link href="./thinkingAnalyzer/thinkingAnalyzer">
-              &gt;&gt; jump to Thinking Analyzer
-            </Link>
-          </p>
-          <p>
-            Do you want to clear what you should do?
-            <br />
-            <Link href="./challengeList/challengeList">
-              &gt;&gt; jump to Challenge List
-            </Link>
+            I made tool for <Link href="./readDocuments/readDocuments">reading a document.</Link>
           </p>
           <p>
             I'm writing document about important in thinking everything.
@@ -68,7 +57,6 @@ export default function HomePage({ allPostsData }) {
             </Link>{" "}
             Site.
           </p>
-          <p>test</p>
         </section>
       </Layout>
     </>
