@@ -1,37 +1,38 @@
 .indexPage {
-	margin: auto;
-	max-width: 90%;
-	height: 100vh;
+  margin: auto;
+  max-width: 90%;
+  height: 100vh;
 }
 
+/*
 .indexPage a {
-	text-decoration: none;
+  	text-decoration: none;
 }
 
 .indexPage a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
+*/
 
 .textCard {
-	position: fixed;
-	top: 40%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .centerText {
-	opacity: 0;
-	animation-name: fadeIn;
-	animation-duration: 0.7s;
-	animation-fill-mode: forwards;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
 }
 
-
 @keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
