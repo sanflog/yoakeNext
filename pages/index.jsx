@@ -41,7 +41,7 @@ export default function HomePage({ allPostsData }) {
               <Link href="http://yoake.lsv.jp"> MY WORKS ARE HERE.</Link>
             </h1>
             <h1>
-              IF YOU HAVE ANY QUESTIONS,
+              IF YOU HAVE ANY QUESTIONS,a
               <Link href="https://www.instagram.com/yoakeed/">
                 PLEASE LET ME KNOW.
               </Link>
