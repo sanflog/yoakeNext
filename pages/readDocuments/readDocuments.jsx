@@ -10,23 +10,21 @@ import Date from "/components/date";
 
 // using beutiful soup, alter text in url to my format.
 function alterText() {
-  const url = "https://yoake.site"; // this will be scraped.
-  scrapeWebsite(url).then((title) => {
-    const cont = document.getElementById("contents");
-    cont.innerHTML = title;
-  });
-}
+  const url = "https://www.yahoo.co.jp"; // this will be scraped.
+  const cnt = document.getElementById("contents");
 
-//use axios
-async function scrapeWebsite(url) {
   try {
-    const response = await axios.get(url);
-    console.log("debug");
-    const page = cheerio.load(response.data);
-    const title = page("title").text();
-    return title;
-  } catch (error) {
-    return "error";
+    const request = new XMLHttpRequest();
+    request.open("GET", url, true);
+    request.send(null);
+    request.onreadystatechange = function () {
+      if (request.readyState == 4) {
+        console.log(request.responseText);
+        cnt.innerText = request.responseText;
+      }
+    };
+  } catch {
+    cnt.innerText = "error. You should see console.";
   }
 }
 

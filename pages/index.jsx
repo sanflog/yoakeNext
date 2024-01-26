@@ -23,7 +23,7 @@ export async function getStaticProps() {
 export default function HomePage({ allPostsData }) {
   return (
     <>
-      <LoadPage />
+      {/*      <LoadPage /> */}
       <Layout>
         <Head>
           <meta
@@ -33,30 +33,21 @@ export default function HomePage({ allPostsData }) {
           <title>{siteTitle}</title>
         </Head>
 
-        <section className={` ${styles.indexPage}	`}>
-          <h1
-            className={`
-						${utilStyles.heading2Xl}
-						${utilStyles.paddingBottom10px}
-					`}
+        <section className={` ${utilStyles.padding10px}`}>
+          <div
+            className={` ${utilStyles.headingX1} ${utilStyles.padding1px} ${utilStyles.headerFont}`}
           >
-            YOAKE
-          </h1>
-          <p>
-            I made tool for <Link href="./readDocuments/readDocuments">reading a document.</Link>
-          </p>
-          <p>
-            I'm writing document about important in thinking everything.
-            <br />
-            <Link href="./documents/documents">&gt;&gt; read documents</Link>
-          </p>
-          <p>
-            Here is{" "}
-            <Link href="https://terrific-nerine-a2a.notion.site/39e308760e9c47628b88a5fa9d829adf">
-              Notion
-            </Link>{" "}
-            Site.
-          </p>
+            <h1>
+              YUDAI SAIKAWA IS A WEB DESIGNER AND VIDEO CREATOR.
+              <Link href="http://yoake.lsv.jp"> MY WORKS ARE HERE.</Link>
+            </h1>
+            <h1>
+              IF YOU HAVE ANY QUESTIONS,{" "}
+              <Link href="https://www.instagram.com/yoakeed/">
+                PLEASE LET ME KNOW.
+              </Link>
+            </h1>
+          </div>
         </section>
       </Layout>
     </>
