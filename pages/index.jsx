@@ -23,7 +23,6 @@ export async function getStaticProps() {
 export default function HomePage({ allPostsData }) {
   return (
     <>
-      <LoadPage />
       <Layout>
         <Head>
           <meta
