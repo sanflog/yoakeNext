@@ -17,8 +17,9 @@ export default function HomePage({}) {
         <p class={` ${styles.myName} `}>YUDAI SAIKAWA</p>
         <div className={styles.explain}>
           <p>
-            I'M YUDAI SAIKAWA, A WEB DESIGNER AND VIDEO CREATOR.&nbsp; YOU CAN
-            FIND <Link href="http://yoake.lsv.jp">MY WORKS HERE.</Link>
+            I'M YUDAI SAIKAWA, A WEB DESIGNER AND VIDEO CREATOR.&nbsp;
+            <br />
+            YOU CAN FIND <Link href="http://yoake.lsv.jp">MY WORKS HERE.</Link>
             <br />
             IF YOU HAVE ANY QUESTIONS,{" "}
             <Link href="https://www.instagram.com/yoakeed/">
