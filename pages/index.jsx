@@ -12,21 +12,21 @@ export default function HomePage({}) {
         <title>YOAKE</title>
       </Head>
 
-      <section className={` ${utilStyles.padding10px}`}>
-        <div
-          className={` ${utilStyles.headingX1} ${utilStyles.padding1px} ${utilStyles.headerFont}`}
-        >
-          <h1>
-            YUDAI SAIKAWA IS A WEB DESIGNER AND VIDEO CREATOR.
-            <Link href="http://yoake.lsv.jp"> MY WORKS ARE HERE.</Link>
-          </h1>
-          <h1>
+      <section className={` ${utilStyles.padding10px} ${styles.indexPage}`}>
+        <p className={styles.siteName}>YOAKE</p>
+        <p class={` ${styles.myName} `}>YUDAI SAIKAWA</p>
+        <div className={styles.explain}>
+          <p>
+            YUDAI SAIKAWA IS A WEB DESIGNER AND VIDEO CREATOR.&nbsp;
+            <Link href="http://yoake.lsv.jp">MY WORKS ARE HERE.</Link>
+            <br />
             IF YOU HAVE ANY QUESTIONS,{" "}
             <Link href="https://www.instagram.com/yoakeed/">
               PLEASE LET ME KNOW.
             </Link>
-          </h1>
+          </p>
         </div>
+        <p className={styles.copyright}>© 2023 all rights reserved.</p>
       </section>
     </>
   );
