@@ -2,25 +2,11 @@ import Head from "next/head";
 import Link from "next/link";
 
 import Layout, { siteTitle } from "../components/layout";
-import BottomFloatMenu from "../components/bottom_float_menu";
-import LoadPage from "../components/load_page";
 
 import utilStyles from "/styles/utils.module.css";
 import styles from "./index.module.css";
 
-import { getSortedPostsData } from "/lib/posts";
-import { dropText } from "/lib/dropText";
-
-export async function getStaticProps() {
-  const allPostsData = getSortedPostsData();
-  return {
-    props: {
-      allPostsData,
-    },
-  };
-}
-
-export default function HomePage({ allPostsData }) {
+export default function HomePage({}) {
   return (
     <>
       <Layout>
