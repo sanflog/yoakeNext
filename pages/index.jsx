@@ -19,7 +19,8 @@ export default function HomePage({}) {
           <p>
             I'M YUDAI SAIKAWA, A WEB DESIGNER AND VIDEO CREATOR.&nbsp;
             <br />
-            YOU CAN FIND <Link href="http://yoake.lsv.jp">MY WORKS HERE.</Link>
+            YOU CAN FIND{" "}
+            <Link href="http://yoake-ed.lsv.jp">MY WORKS HERE.</Link>
             <br />
             IF YOU HAVE ANY QUESTIONS,{" "}
             <Link href="https://www.instagram.com/yoakeed/">
